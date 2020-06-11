@@ -1,0 +1,7 @@
+.DS_Store
+/logs
+/data/db-data
+/data/ssl
+/www/flarum
+/www/game
+.env
