@@ -22,7 +22,7 @@ RUN apk add \
         libpng-dev \
         libjpeg-turbo-dev
 
-RUN docker-php-ext-install pdo pdo_mysql mbstring opcache exif
+RUN docker-php-ext-install pdo_mysql opcache exif
 
 RUN apk --no-cache add shadow \
     && usermod -u 1000 www-data \

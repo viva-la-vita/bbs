@@ -1,5 +1,5 @@
 .DS_Store
-/logs
+/data/logs
 /data/db-data
 /data/ssl
 /www/flarum
