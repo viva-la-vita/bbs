@@ -13,7 +13,7 @@ services:
       MYSQL_PASSWORD: ${DB_PASS}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
     volumes:
-      - ./data/db-data:/var/lib/mysql
+      - ./data/database:/var/lib/mysql
 
   nginx:
     image: nginx-flarum
@@ -33,7 +33,7 @@ services:
       - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/conf/conf.d:/etc/nginx/conf.d
       - ./nginx/conf/snippets:/etc/nginx/snippets
-      - ./www/flarum:/www/flarum
+      - ./flarum:/www/flarum
       - pma-root:/www/pma # phpMyAdmin
     environment:
       - DOMAIN=${DOMAIN}
@@ -75,7 +75,7 @@ services:
       - 9000
     volumes:
       - ./data/logs:/var/log
-      - ./www/flarum:/www/flarum
+      - ./flarum:/www/flarum
     healthcheck:
       test: ["CMD-SHELL", "pidof php-fpm"]
       interval: 5s

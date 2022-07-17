@@ -1,7 +1,8 @@
 .DS_Store
 /data/logs
-/data/db-data
+/data/database
 /data/ssl
-/www/flarum
-/www/game
+/flarum/public
+/flarum/storage
+/flarum/vendor
 .env

@@ -1,11 +1,12 @@
-FROM php:7.4-fpm-alpine
+FROM php:8.1-fpm-alpine
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
-    echo "Asia/Shanghai" > /etc/timezone
+RUN echo "Asia/Shanghai" > /etc/timezone
+
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
 RUN apk add \
         freetype \
