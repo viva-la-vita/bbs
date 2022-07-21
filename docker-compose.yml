@@ -1,10 +1,10 @@
 version: "3.6"
 
 services:
-  database:
+  mysql:
     image: mysql:5.7
+    container_name: bbs-mysql
     restart: always
-    container_name: site-db
     expose:
       - 3306
     environment:
@@ -13,35 +13,23 @@ services:
       MYSQL_PASSWORD: ${DB_PASS}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
     volumes:
-      - ./data/database:/var/lib/mysql
-      - ./data/database-backup:/home/mysql
+      - mysql:/var/lib/mysql
 
   nginx:
-    image: nginx-flarum
-    build:
-      context: ./nginx
-      args: 
-        - DOMAIN=${DOMAIN}
-    container_name: site-nginx
+    image: bbs-nginx
+    build: ./nginx
+    container_name: bbs-nginx
     restart: always
     ports:
       - ${HTTP_PORT}:80
-      - ${HTTPS_PORT}:443
     volumes:
-      - ./data/logs:/var/log/nginx
-      - ./data/ssl/.well-known:/.well-known
-      - ./data/ssl/certs:/etc/ssl/certs
-      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/conf/conf.d:/etc/nginx/conf.d
-      - ./nginx/conf/snippets:/etc/nginx/snippets
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
       - ./flarum:/www/flarum
-      - pma-root:/www/pma # phpMyAdmin
     environment:
       - DOMAIN=${DOMAIN}
     extra_hosts:
       - "localhost:127.0.0.1"
-    labels:
-      - sh.acme.autoload.domain=${DOMAIN}
     healthcheck:
       test: ["CMD-SHELL", "wget -q --spider --proxy off http://localhost/get-health || exit 1"]
       interval: 5s
@@ -51,31 +39,14 @@ services:
       options:
         max-size: "100m"
 
-  acme.sh:
-    image: neilpang/acme.sh
-    container_name: acme.sh
-    command: daemon
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./data/ssl/acmeout:/acme.sh
-      - ./data/ssl/.well-known:/.well-known
-    environment:
-      - DEPLOY_DOCKER_CONTAINER_LABEL=sh.acme.autoload.domain=${DOMAIN}
-      - DEPLOY_DOCKER_CONTAINER_KEY_FILE=/etc/ssl/certs/${DOMAIN}/key.pem
-      - DEPLOY_DOCKER_CONTAINER_CERT_FILE="/etc/ssl/certs/${DOMAIN}/cert.pem"
-      - DEPLOY_DOCKER_CONTAINER_CA_FILE="/etc/ssl/certs/${DOMAIN}/ca.pem"
-      - DEPLOY_DOCKER_CONTAINER_FULLCHAIN_FILE="/etc/ssl/certs/${DOMAIN}/full.pem"
-      - DEPLOY_DOCKER_CONTAINER_RELOAD_CMD="kill 1"
-
-  php-fpm-service:
-    image: php-fpm-flarum
+  php-fpm:
+    image: bbs-php-fpm
     build: ./php-fpm
-    container_name: site-php-fpm
+    container_name: bbs-php-fpm
     restart: always
     expose:
       - 9000
     volumes:
-      - ./data/logs:/var/log
       - ./flarum:/www/flarum
     healthcheck:
       test: ["CMD-SHELL", "pidof php-fpm"]
@@ -86,14 +57,5 @@ services:
       options:
         max-size: "100m"
 
-  pma-service:
-    image: phpmyadmin/phpmyadmin:fpm-alpine
-    container_name: site-pma
-    restart: always
-    environment: 
-      - PMA_HOST=site-db
-    volumes:
-      - pma-root:/var/www/html
-
 volumes: 
-  pma-root:
+  mysql:

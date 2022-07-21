@@ -1,9 +1,9 @@
 <?php return array (
-  'debug' => true,
-  'database' => 
+  'debug' => false,
+  'database' =>
   array (
     'driver' => 'mysql',
-    'host' => 'site-db',
+    'host' => 'bbs-mysql',
     'port' => 3306,
     'database' => 'flarum',
     'username' => 'flarum',
@@ -12,15 +12,18 @@
     'collation' => 'utf8mb4_unicode_ci',
     'prefix' => '',
     'strict' => false,
-    'engine' => 'InnoDB',
+    'engine' => NULL,
     'prefix_indexes' => true,
   ),
   'url' => 'https://forum.viva-la-vita.org',
-  'paths' => 
+  'paths' =>
   array (
     'api' => 'api',
     'admin' => 'admin',
   ),
-  (new FoF\Upload\Extend\Adapters())
-        ->force('aws-s3'),
+  'headers' =>
+  array (
+    'poweredByHeader' => true,
+    'referrerPolicy' => 'same-origin',
+  ),
 );

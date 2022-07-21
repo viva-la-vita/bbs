@@ -10,46 +10,23 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Franz Liedke",
-            "email": "franz@develophp.org"
-        },
-        {
-            "name": "Daniel Klabbers",
-            "email": "daniel@klabbers.email",
-            "homepage": "https://luceos.com"
-        },
-        {
-            "name": "David Sevilla Martin",
-            "email": "me+flarum@datitisev.me",
-            "homepage": "https://datitisev.me"
-        },
-        {
-            "name": "Clark Winkelmann",
-            "email": "clark.winkelmann@gmail.com",
-            "homepage": "https://clarkwinkelmann.com"
-        },
-        {
-            "name": "Matthew Kilgore",
-            "email": "matthew@kilgore.dev"
-        },
-        {
-            "name": "Alexander (Sasha) Skvortsov",
-            "email": "askvortsov@flarum.org"
+            "name": "Flarum",
+            "email": "info@flarum.org",
+            "homepage": "https://flarum.org/team"
         }
     ],
     "support": {
         "issues": "https://github.com/flarum/core/issues",
         "source": "https://github.com/flarum/flarum",
-        "docs": "https://flarum.org/docs/"
+        "docs": "https://docs.flarum.org/"
     },
     "require": {
-        "flarum-lang/chinese-simplified": "*",
+        "flarum/core": "^1.4",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
-        "flarum/core": "^1.0",
         "flarum/emoji": "*",
-        "flarum/flags": "*",
         "flarum/lang-english": "*",
+        "flarum/flags": "*",
         "flarum/likes": "*",
         "flarum/lock": "*",
         "flarum/markdown": "*",
@@ -60,38 +37,10 @@
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
-        "flarum/tags": "*",
-        "fof/byobu": "*@beta",
-        "fof/default-group": "*",
-        "fof/doorman": "*",
-        "fof/drafts": "*",
-        "fof/follow-tags": "*",
-        "fof/formatting": "*",
-        "fof/forum-statistics-widget": "*",
-        "fof/gamification": "*",
-        "fof/links": "*",
-        "fof/merge-discussions": "*",
-        "fof/moderator-notes": "*",
-        "fof/nightmode": "*",
-        "fof/oauth": "*",
-        "fof/pages": "*",
-        "fof/polls": "*",
-        "fof/profile-image-crop": "*",
-        "fof/reactions": "*",
-        "fof/secure-https": "*",
-        "fof/share-social": "*",
-        "fof/socialprofile": "*",
-        "fof/terms": "*",
-        "fof/upload": "*",
-        "fof/user-bio": "*",
-        "fof/user-directory": "*",
-        "fof/username-request": "*",
-        "kyrne/whisper": "*",
-        "league/flysystem-aws-s3-v3": "*"
+        "flarum/tags": "*"
     },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true
-    },
-    "prefer-stable": true
+    }
 }
