@@ -1,0 +1,21 @@
+services:
+  flarum:
+    image: ghcr.io/viva-la-vita/flarum:development
+    build:
+      context: ./flarum
+    volumes:
+      - ./flarum/vendor:/var/www/flarum/vendor
+      - ./flarum/flarum:/var/www/flarum/flarum
+      - ./flarum/config.php:/var/www/flarum/config.php
+      - ./flarum/extend.php:/var/www/flarum/extend.php
+      - ./flarum/site.php:/var/www/flarum/site.php
+      - ./flarum/composer.json:/var/www/flarum/composer.json
+      - ./flarum/composer.lock:/var/www/flarum/composer.lock
+
+  nginx:
+    image: ghcr.io/viva-la-vita/nginx:development
+    build:
+      context: ./nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d

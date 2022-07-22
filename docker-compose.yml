@@ -1,9 +1,28 @@
-version: "3.6"
+version: "3"
 
 services:
+  flarum:
+    image: ghcr.io/viva-la-vita/flarum
+    restart: always
+    expose:
+      - 9000
+    volumes:
+      - public:/var/www/flarum/public
+      - storage:/var/www/flarum/storage
+
+  nginx:
+    image: ghcr.io/viva-la-vita/nginx
+    restart: always
+    ports:
+      - ${HTTP_PORT}:80
+    volumes:
+      - public:/var/www/flarum/public
+      - storage:/var/www/flarum/storage
+    extra_hosts:
+      - "localhost:127.0.0.1"
+
   mysql:
     image: mysql:5.7
-    container_name: bbs-mysql
     restart: always
     expose:
       - 3306
@@ -15,47 +34,7 @@ services:
     volumes:
       - mysql:/var/lib/mysql
 
-  nginx:
-    image: bbs-nginx
-    build: ./nginx
-    container_name: bbs-nginx
-    restart: always
-    ports:
-      - ${HTTP_PORT}:80
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./flarum:/www/flarum
-    environment:
-      - DOMAIN=${DOMAIN}
-    extra_hosts:
-      - "localhost:127.0.0.1"
-    healthcheck:
-      test: ["CMD-SHELL", "wget -q --spider --proxy off http://localhost/get-health || exit 1"]
-      interval: 5s
-      retries: 12
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "100m"
-
-  php-fpm:
-    image: bbs-php-fpm
-    build: ./php-fpm
-    container_name: bbs-php-fpm
-    restart: always
-    expose:
-      - 9000
-    volumes:
-      - ./flarum:/www/flarum
-    healthcheck:
-      test: ["CMD-SHELL", "pidof php-fpm"]
-      interval: 5s
-      retries: 12
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "100m"
-
-volumes: 
+volumes:
   mysql:
+  public:
+  storage:

@@ -1,9 +1,9 @@
 <?php return array (
   'debug' => false,
-  'database' =>
+  'database' => 
   array (
     'driver' => 'mysql',
-    'host' => 'bbs-mysql',
+    'host' => 'mysql',
     'port' => 3306,
     'database' => 'flarum',
     'username' => 'flarum',
@@ -15,13 +15,13 @@
     'engine' => NULL,
     'prefix_indexes' => true,
   ),
-  'url' => 'https://forum.viva-la-vita.org',
-  'paths' =>
+  'url' => 'https://bbs.viva-la-vita.org',
+  'paths' => 
   array (
     'api' => 'api',
     'admin' => 'admin',
   ),
-  'headers' =>
+  'headers' => 
   array (
     'poweredByHeader' => true,
     'referrerPolicy' => 'same-origin',

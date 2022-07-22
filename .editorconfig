@@ -15,5 +15,5 @@ indent_size = 2
 [*.{diff,md}]
 trim_trailing_whitespace = false
 
-[*.{php,json}]
+[*.{php,json,conf}]
 indent_size = 4
