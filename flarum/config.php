@@ -1,6 +1,6 @@
 <?php return array (
-  'debug' => false,
-  'database' => 
+  'debug' => true,
+  'database' =>
   array (
     'driver' => 'mysql',
     'host' => 'mysql',
@@ -16,12 +16,12 @@
     'prefix_indexes' => true,
   ),
   'url' => 'https://bbs.viva-la-vita.org',
-  'paths' => 
+  'paths' =>
   array (
     'api' => 'api',
     'admin' => 'admin',
   ),
-  'headers' => 
+  'headers' =>
   array (
     'poweredByHeader' => true,
     'referrerPolicy' => 'same-origin',

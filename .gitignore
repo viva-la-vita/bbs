@@ -1,9 +1,2 @@
-.DS_Store
-/data/logs
-/data/database
-/data/database-backup
-/data/ssl
-/flarum/public
-/flarum/storage
-/flarum/vendor
+vendor
 .env
