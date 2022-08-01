@@ -6,6 +6,11 @@ services:
     restart: always
     expose:
       - 9000
+    environment:
+      URL: https://bbs.viva-la-vita.org
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - public:/var/www/flarum/public
       - storage:/var/www/flarum/storage
@@ -22,15 +27,15 @@ services:
       - "localhost:127.0.0.1"
 
   mysql:
-    image: mysql:5.7
+    image: mysql:8.0
     restart: always
     expose:
       - 3306
     environment:
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASS}
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - mysql:/var/lib/mysql
 

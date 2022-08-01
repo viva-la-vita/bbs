@@ -3,6 +3,11 @@ services:
     image: ghcr.io/viva-la-vita/flarum:development
     build:
       context: ./flarum
+    environment:
+      URL: http://localhost:4000
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - ./flarum/vendor:/var/www/flarum/vendor
       - ./flarum/flarum:/var/www/flarum/flarum
