@@ -39,7 +39,16 @@ services:
     volumes:
       - mysql:/var/lib/mysql
 
+  sonic:
+    image: ghcr.io/viva-la-vita/sonic
+    restart: always
+    expose:
+      - 1491
+    volumes:
+      - sonic:/var/lib/sonic/store
+
 volumes:
   mysql:
   public:
   storage:
+  sonic:
