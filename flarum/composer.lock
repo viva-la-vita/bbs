@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f64aa82fd96596188f596b2573cbe6e",
+    "content-hash": "84f1d29ceaa24dfb8840cfe133bede21",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -9049,6 +9049,66 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "time": "2020-10-15T08:29:30+00:00"
+        },
+        {
+            "name": "pipecraft/flarum-ext-id-slug",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PipecraftNet/flarum-ext-id-slug.git",
+                "reference": "124805a6ce544bcb5d27383f6ea6ddbe250940f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PipecraftNet/flarum-ext-id-slug/zipball/124805a6ce544bcb5d27383f6ea6ddbe250940f9",
+                "reference": "124805a6ce544bcb5d27383f6ea6ddbe250940f9",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "ID Slug",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-info",
+                        "backgroundColor": "#000",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pipecraft\\IdSlug\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pipecraft",
+                    "email": "pipecraft.net@gmail.com"
+                }
+            ],
+            "description": "A Flarum extension. Use id as slug in discussion URL.",
+            "homepage": "https://github.com/PipecraftNet",
+            "keywords": [
+                "flarum",
+                "slug",
+                "slug-driver"
+            ],
+            "support": {
+                "issues": "https://github.com/PipecraftNet/flarum-ext-id-slug/issues",
+                "source": "https://github.com/PipecraftNet/flarum-ext-id-slug"
+            },
+            "time": "2021-09-07T16:45:57+00:00"
         },
         {
             "name": "ppshobi/psonic",

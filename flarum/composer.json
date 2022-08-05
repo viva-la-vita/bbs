@@ -77,6 +77,7 @@
         "fof/user-directory": "*",
         "fof/username-request": "*",
         "ganuonglachanh/sonic": "*",
+        "pipecraft/flarum-ext-id-slug": "*",
         "the-turk/flarum-stickiest": "*"
     },
     "config": {
