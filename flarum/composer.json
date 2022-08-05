@@ -76,7 +76,8 @@
         "fof/user-bio": "*",
         "fof/user-directory": "*",
         "fof/username-request": "*",
-        "ganuonglachanh/sonic": "*"
+        "ganuonglachanh/sonic": "*",
+        "the-turk/flarum-stickiest": "*"
     },
     "config": {
         "preferred-install": "dist",

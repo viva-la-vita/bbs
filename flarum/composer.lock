@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc3d3e1d1a7a5f5c78439f83be90143d",
+    "content-hash": "7f64aa82fd96596188f596b2573cbe6e",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -12496,6 +12496,67 @@
                 }
             ],
             "time": "2022-06-27T16:58:25+00:00"
+        },
+        {
+            "name": "the-turk/flarum-stickiest",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/the-turk/flarum-stickiest.git",
+                "reference": "357dea55eeea1cdc5f59357b2ee6d511693293fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/the-turk/flarum-stickiest/zipball/357dea55eeea1cdc5f59357b2ee6d511693293fc",
+                "reference": "357dea55eeea1cdc5f59357b2ee6d511693293fc",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=1.2.0",
+                "flarum/sticky": "^1.0.0",
+                "flarum/tags": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Stickiest",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-thumbtack",
+                        "backgroundColor": "#b72a2a",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TheTurk\\Stickiest\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hasan Özbey",
+                    "email": "hasanoozbey@gmail.com",
+                    "homepage": "https://github.com/the-turk"
+                }
+            ],
+            "description": "Stick, super stick or tag stick discussions to the top of the list.",
+            "keywords": [
+                "discussion",
+                "flarum",
+                "pin",
+                "sticky",
+                "super-sticky"
+            ],
+            "support": {
+                "issues": "https://github.com/the-turk/flarum-stickiest/issues",
+                "source": "https://github.com/the-turk/flarum-stickiest"
+            },
+            "time": "2022-07-24T14:53:54+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
