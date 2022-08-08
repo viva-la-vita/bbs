@@ -17,7 +17,7 @@ CMD ["sh", "-c", "composer update && docker-php-entrypoint php-fpm"]
 
 FROM development AS production
 
-COPY php/flarum.ini /usr/local/etcphp/conf.d/
+COPY php/flarum.ini /usr/local/etc/php/conf.d/
 
 COPY php/zzz-flarum.conf /usr/local/etc/php-fpm.d/
 
