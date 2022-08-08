@@ -7,10 +7,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 
 WORKDIR $PHP_INI_DIR
 
-RUN mv php.ini-production php.ini && \
-    sed -i 's/memory_limit = 128M/memory_limit = 256M/g' php.ini && \
-    sed -i 's/post_max_size = 8M/post_max_size = 20M/g' php.ini && \
-    sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 20M/g' php.ini
+RUN mv php.ini-production php.ini
 
 WORKDIR /var/www/flarum
 
@@ -20,13 +17,17 @@ CMD ["sh", "-c", "composer update && docker-php-entrypoint php-fpm"]
 
 FROM development AS production
 
+COPY php/flarum.ini /usr/local/etcphp/conf.d/
+
+COPY php/zzz-flarum.conf /usr/local/etc/php-fpm.d/
+
 WORKDIR /var/www/flarum
 
-COPY ["composer.json", "composer.lock", "./"]
+COPY www/composer.json www/composer.lock ./
 
 RUN composer update
 
-COPY [".", "."]
+COPY www .
 
 ENTRYPOINT ["docker-php-entrypoint"]
 

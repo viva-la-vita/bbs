@@ -9,13 +9,15 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - ./flarum/vendor:/var/www/flarum/vendor
-      - ./flarum/flarum:/var/www/flarum/flarum
-      - ./flarum/config.php:/var/www/flarum/config.php
-      - ./flarum/extend.php:/var/www/flarum/extend.php
-      - ./flarum/site.php:/var/www/flarum/site.php
-      - ./flarum/composer.json:/var/www/flarum/composer.json
-      - ./flarum/composer.lock:/var/www/flarum/composer.lock
+      - ./flarum/php/zzz-flarum.conf:/usr/local/etc/php-fpm.d/zzz-flarum.conf
+      - ./flarum/php/flarum.ini:/usr/local/etc/php/conf.d/flarum.ini
+      - ./flarum/www/vendor:/var/www/flarum/vendor
+      - ./flarum/www/flarum:/var/www/flarum/flarum
+      - ./flarum/www/config.php:/var/www/flarum/config.php
+      - ./flarum/www/extend.php:/var/www/flarum/extend.php
+      - ./flarum/www/site.php:/var/www/flarum/site.php
+      - ./flarum/www/composer.json:/var/www/flarum/composer.json
+      - ./flarum/www/composer.lock:/var/www/flarum/composer.lock
 
   nginx:
     image: ghcr.io/viva-la-vita/nginx:development
