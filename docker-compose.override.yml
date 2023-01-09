@@ -28,6 +28,6 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d
 
   sonic:
-    image: valeriansaliou/sonic:v1.3.5
+    image: valeriansaliou/sonic:v1.4.0
     volumes:
       - ./sonic/sonic.cfg:/etc/sonic.cfg
