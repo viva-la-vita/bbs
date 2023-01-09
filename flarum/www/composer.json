@@ -25,7 +25,7 @@
         "flarum-lang/chinese-simplified": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
-        "flarum/core": "^1.4",
+        "flarum/core": "^1.0",
         "flarum/emoji": "*",
         "flarum/flags": "*",
         "flarum/lang-english": "*",
@@ -78,6 +78,7 @@
         "fof/user-directory": "*",
         "fof/username-request": "*",
         "ganuonglachanh/sonic": "*",
+        "league/flysystem-aws-s3-v3": "*",
         "pipecraft/flarum-ext-id-slug": "*",
         "the-turk/flarum-stickiest": "*"
     },
