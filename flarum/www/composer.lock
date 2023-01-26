@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a6eafac1267817a862de1bc9f6d2f6f",
+    "content-hash": "c5ca150eab32c77674a676a3208c91fb",
     "packages": [
         {
             "name": "askvortsov/flarum-pwa",
@@ -118,16 +118,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.256.0",
+            "version": "3.257.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "99d254413e0b4899feb53d4ad373fc630a9e089a"
+                "reference": "97c41c42690e4fd7846915eae520e508d71c0baf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/99d254413e0b4899feb53d4ad373fc630a9e089a",
-                "reference": "99d254413e0b4899feb53d4ad373fc630a9e089a",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/97c41c42690e4fd7846915eae520e508d71c0baf",
+                "reference": "97c41c42690e4fd7846915eae520e508d71c0baf",
                 "shasum": ""
             },
             "require": {
@@ -206,9 +206,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.256.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.257.9"
             },
-            "time": "2023-01-09T19:23:53+00:00"
+            "time": "2023-01-26T19:21:26+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -1601,16 +1601,16 @@
         },
         {
             "name": "flarum/core",
-            "version": "v1.6.2",
+            "version": "v1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "d359cd7a905eb341ffb7ea4e8c5595ee46084b67"
+                "reference": "9ae3d20f82da3df3e7ebbb145a7c47c006b36966"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/d359cd7a905eb341ffb7ea4e8c5595ee46084b67",
-                "reference": "d359cd7a905eb341ffb7ea4e8c5595ee46084b67",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/9ae3d20f82da3df3e7ebbb145a7c47c006b36966",
+                "reference": "9ae3d20f82da3df3e7ebbb145a7c47c006b36966",
                 "shasum": ""
             },
             "require": {
@@ -1741,7 +1741,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-11-18T21:35:12+00:00"
+            "time": "2023-01-10T12:17:54+00:00"
         },
         {
             "name": "flarum/emoji",
@@ -2207,20 +2207,20 @@
         },
         {
             "name": "flarum/mentions",
-            "version": "v1.6.1",
+            "version": "v1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/mentions.git",
-                "reference": "42563a93674d46412c294d091690f3ea3f251406"
+                "reference": "c40e89628022f25c34459f2d2995f13e53721754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/mentions/zipball/42563a93674d46412c294d091690f3ea3f251406",
-                "reference": "42563a93674d46412c294d091690f3ea3f251406",
+                "url": "https://api.github.com/repos/flarum/mentions/zipball/c40e89628022f25c34459f2d2995f13e53721754",
+                "reference": "c40e89628022f25c34459f2d2995f13e53721754",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^1.6"
+                "flarum/core": "^1.6.3"
             },
             "require-dev": {
                 "flarum/core": "*@dev",
@@ -2283,7 +2283,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2022-11-16T10:30:13+00:00"
+            "time": "2023-01-10T11:44:00+00:00"
         },
         {
             "name": "flarum/nicknames",
@@ -2612,20 +2612,20 @@
         },
         {
             "name": "flarum/subscriptions",
-            "version": "v1.6.1",
+            "version": "v1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/subscriptions.git",
-                "reference": "40e44f1ceaade19111b3acb8bb69edf0c906b571"
+                "reference": "88c561a8a055d1e8c6c01045cddbb57b03111fd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/subscriptions/zipball/40e44f1ceaade19111b3acb8bb69edf0c906b571",
-                "reference": "40e44f1ceaade19111b3acb8bb69edf0c906b571",
+                "url": "https://api.github.com/repos/flarum/subscriptions/zipball/88c561a8a055d1e8c6c01045cddbb57b03111fd5",
+                "reference": "88c561a8a055d1e8c6c01045cddbb57b03111fd5",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^1.6"
+                "flarum/core": "^1.6.3"
             },
             "require-dev": {
                 "flarum/approval": "@dev",
@@ -2691,7 +2691,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2022-11-16T10:30:13+00:00"
+            "time": "2023-01-10T14:06:03+00:00"
         },
         {
             "name": "flarum/suspend",
@@ -2851,90 +2851,6 @@
                 }
             ],
             "time": "2022-11-16T10:30:13+00:00"
-        },
-        {
-            "name": "fof/analytics",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/analytics.git",
-                "reference": "d5484c204a3a11b890dce3778bb65c468c814a78"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/analytics/zipball/d5484c204a3a11b890dce3778bb65c468c814a78",
-                "reference": "d5484c204a3a11b890dce3778bb65c468c814a78",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "replace": {
-                "flagrow/flarum-ext-analytics": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Analytics",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-chart-line",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/1983"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Analytics\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniël Klabbers",
-                    "email": "daniel+flarum@klabbers.email",
-                    "homepage": "http://hyn.io"
-                },
-                {
-                    "name": "Clark Winkelmann",
-                    "email": "clark.winkelmann@gmail.com",
-                    "homepage": "https://clarkwinkelmann.com/"
-                },
-                {
-                    "name": "IanM",
-                    "homepage": "https://discuss.flarum.org/u/ianm"
-                }
-            ],
-            "description": "Tracks analytics using Google Analytics, Google Optimize/GTM and Matomo",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "analytics",
-                "extension",
-                "flarum",
-                "google-analytics",
-                "gtm",
-                "matomo",
-                "piwik"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/1983",
-                "issues": "https://github.com/FriendsOfFlarum/analytics/issues",
-                "source": "https://github.com/FriendsOfFlarum/analytics"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2022-08-15T03:38:09+00:00"
         },
         {
             "name": "fof/best-answer",
@@ -3101,74 +3017,6 @@
             "time": "2022-12-12T09:47:58+00:00"
         },
         {
-            "name": "fof/default-group",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/default-group.git",
-                "reference": "759e19fc273ae224bb6c8a81797d696fba543bd2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/default-group/zipball/759e19fc273ae224bb6c8a81797d696fba543bd2",
-                "reference": "759e19fc273ae224bb6c8a81797d696fba543bd2",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Default Group",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-users",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\DefaultGroup\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniël Klabbers",
-                    "email": "daniel+hyn@klabbers.email",
-                    "homepage": "https://luceos.com"
-                },
-                {
-                    "name": "David Sevilla Martín",
-                    "email": "me+fof@datitisev.me",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Assign a default group to new users automatically",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/18158",
-                "issues": "https://github.com/FriendsOfFlarum/default-group/issues",
-                "source": "https://github.com/FriendsOfFlarum/default-group"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2022-05-20T11:59:40+00:00"
-        },
-        {
             "name": "fof/default-user-preferences",
             "version": "1.2.0",
             "source": {
@@ -3236,78 +3084,6 @@
                 }
             ],
             "time": "2022-11-28T20:12:58+00:00"
-        },
-        {
-            "name": "fof/doorman",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/doorman.git",
-                "reference": "535771de73ab575adfc5f0b412aa11bcf1664fb1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/doorman/zipball/535771de73ab575adfc5f0b412aa11bcf1664fb1",
-                "reference": "535771de73ab575adfc5f0b412aa11bcf1664fb1",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "replace": {
-                "reflar/doorman": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Doorman",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-door-closed",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#FFF"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/17845"
-                },
-                "optional-dependencies": [
-                    "zerosonesfun/direct-links"
-                ]
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Doorman\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Team Fof",
-                    "email": "team@friendsofflarum.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Create invite codes for users to sign up and be assigned to a group",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/17845",
-                "issues": "https://github.com/FriendsOfFlarum/doorman/issues",
-                "source": "https://github.com/FriendsOfFlarum/doorman"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2022-04-08T09:16:19+00:00"
         },
         {
             "name": "fof/drafts",
@@ -3569,72 +3345,6 @@
             "time": "2022-10-07T15:11:18+00:00"
         },
         {
-            "name": "fof/formatting",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/formatting.git",
-                "reference": "fd46d22c443af40293af1ecd2697065c96c18c23"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/formatting/zipball/fd46d22c443af40293af1ecd2697065c96c18c23",
-                "reference": "fd46d22c443af40293af1ecd2697065c96c18c23",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.0.0"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Formatting",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-font",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/17770"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Formatting\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Sevilla Martín",
-                    "email": "me+fof@datitisev.me",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Customize TextFormatter with plugins through the admin interface",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/17770",
-                "issues": "https://github.com/FriendsOfFlarum/formatting/issues",
-                "source": "https://github.com/FriendsOfFlarum/formatting"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2021-11-06T15:42:57+00:00"
-        },
-        {
             "name": "fof/forum-statistics-widget",
             "version": "1.0.2",
             "source": {
@@ -3770,82 +3480,6 @@
                 }
             ],
             "time": "2022-07-01T10:48:43+00:00"
-        },
-        {
-            "name": "fof/gamification",
-            "version": "1.6.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/gamification.git",
-                "reference": "9c12c66fabd660b09be9ac477cbebdb255788a2b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/gamification/zipball/9c12c66fabd660b09be9ac477cbebdb255788a2b",
-                "reference": "9c12c66fabd660b09be9ac477cbebdb255788a2b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "flarum/core": "^1.3.1",
-                "fof/extend": "^1.0.0"
-            },
-            "replace": {
-                "reflar/gamification": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Gamification",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-thumbs-up",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/20671"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Gamification\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FoF Team",
-                    "email": "team@friendsofflarum.org",
-                    "homepage": "https://friendsofflarum.org"
-                }
-            ],
-            "description": "Upvotes and downvotes for your Flarum community",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "Gamification",
-                "Settings",
-                "flarum",
-                "friendsofflarum",
-                "misc",
-                "points"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/20671",
-                "issues": "https://github.com/FriendsOfFlarum/gamification/issues",
-                "source": "https://github.com/FriendsOfFlarum/gamification"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2022-11-06T18:41:12+00:00"
         },
         {
             "name": "fof/linguist",
@@ -3991,78 +3625,6 @@
                 }
             ],
             "time": "2022-08-27T21:34:57+00:00"
-        },
-        {
-            "name": "fof/mason",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/mason.git",
-                "reference": "d1bb0af6c111f12e45cbc5476ddfc8feffd5d0aa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/mason/zipball/d1bb0af6c111f12e45cbc5476ddfc8feffd5d0aa",
-                "reference": "d1bb0af6c111f12e45cbc5476ddfc8feffd5d0aa",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2"
-            },
-            "replace": {
-                "flagrow/mason": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Mason",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-dungeon",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/7028"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Mason\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Clark Winkelmann",
-                    "email": "clark.winkelmann@gmail.com",
-                    "homepage": "https://clarkwinkelmann.com/"
-                }
-            ],
-            "description": "Add custom fields to discussions",
-            "keywords": [
-                "custom-fields",
-                "discussion",
-                "extension",
-                "flagrow",
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/7028",
-                "issues": "https://github.com/FriendsOfFlarum/mason/issues",
-                "source": "https://github.com/FriendsOfFlarum/mason"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2022-09-22T15:12:25+00:00"
         },
         {
             "name": "fof/merge-discussions",
@@ -4393,80 +3955,6 @@
                 }
             ],
             "time": "2022-11-15T22:19:27+00:00"
-        },
-        {
-            "name": "fof/pages",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/pages.git",
-                "reference": "9ddae6bad9a219735ae3db07187061b375ae0e4b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/pages/zipball/9ddae6bad9a219735ae3db07187061b375ae0e4b",
-                "reference": "9ddae6bad9a219735ae3db07187061b375ae0e4b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "flarum/core": "^1.2"
-            },
-            "replace": {
-                "sijad/flarum-ext-pages": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Pages",
-                    "category": "feature",
-                    "icon": {
-                        "name": "far fa-file-alt",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/18301"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Pages\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sajjad Hashemian",
-                    "email": "wolaws@gmail.com"
-                },
-                {
-                    "name": "David Sevilla Martín",
-                    "email": "david.s@redevs.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Create custom pages with Flarum",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/18301",
-                "issues": "https://github.com/FriendsOfFlarum/pages/issues",
-                "source": "https://github.com/FriendsOfFlarum/pages"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2022-04-09T22:54:56+00:00"
         },
         {
             "name": "fof/polls",
@@ -5050,83 +4538,6 @@
             "time": "2022-06-08T18:26:24+00:00"
         },
         {
-            "name": "fof/spamblock",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/spamblock.git",
-                "reference": "ee4842ea3305f32596cfac90bb5fdf015b0c7d94"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/spamblock/zipball/ee4842ea3305f32596cfac90bb5fdf015b0c7d94",
-                "reference": "ee4842ea3305f32596cfac90bb5fdf015b0c7d94",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "require-dev": {
-                "flarum/core": "*@dev",
-                "flarum/flags": "*@dev",
-                "flarum/suspend": "*@dev",
-                "flarum/testing": "^1.0.0",
-                "symfony/var-dumper": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Spamblock",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-pastafarianism",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    },
-                    "optional-dependencies": [
-                        "flarum/suspend",
-                        "flarum/flags"
-                    ]
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/17772"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Spamblock\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Sevilla Martin",
-                    "email": "david.s@redevs.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Mark user as spammer, suspending them & hiding their posts and discussions",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/17772",
-                "issues": "https://github.com/FriendsOfFlarum/spamblock/issues",
-                "source": "https://github.com/FriendsOfFlarum/spamblock"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2022-11-02T00:13:11+00:00"
-        },
-        {
             "name": "fof/split",
             "version": "1.1.0",
             "source": {
@@ -5192,83 +4603,6 @@
                 }
             ],
             "time": "2022-07-01T11:09:44+00:00"
-        },
-        {
-            "name": "fof/subscribed",
-            "version": "1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/subscribed.git",
-                "reference": "029999e8e0809bc2ca253c4979c511fd1302cc90"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/subscribed/zipball/029999e8e0809bc2ca253c4979c511fd1302cc90",
-                "reference": "029999e8e0809bc2ca253c4979c511fd1302cc90",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.2.0"
-            },
-            "replace": {
-                "flagrow/subscribed": "*"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Subscribed",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-reply-all",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    },
-                    "optional-dependencies": [
-                        "flarum/approval",
-                        "flarum/flags"
-                    ]
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/20917"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\Subscribed\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FoF Team",
-                    "email": "team@friendsofflarum.org",
-                    "role": "developer"
-                }
-            ],
-            "description": "Additional user subscriptions for your forum",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "extension",
-                "flarum",
-                "fof",
-                "friendsofflarum",
-                "subscriptions"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/20917",
-                "issues": "https://github.com/FriendsOfFlarum/subscribed/issues",
-                "source": "https://github.com/FriendsOfFlarum/subscribed"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2022-05-23T19:53:43+00:00"
         },
         {
             "name": "fof/terms",
@@ -9234,16 +8568,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v3.2.8",
+            "version": "v3.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368"
+                "reference": "c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
-                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
+                "url": "https://api.github.com/repos/nette/utils/zipball/c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c",
+                "reference": "c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c",
                 "shasum": ""
             },
             "require": {
@@ -9253,6 +8587,7 @@
                 "nette/di": "<3.0.6"
             },
             "require-dev": {
+                "jetbrains/phpstorm-attributes": "dev-master",
                 "nette/tester": "~2.0",
                 "phpstan/phpstan": "^1.0",
                 "tracy/tracy": "^2.3"
@@ -9313,9 +8648,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.2.8"
+                "source": "https://github.com/nette/utils/tree/v3.2.9"
             },
-            "time": "2022-09-12T23:36:20+00:00"
+            "time": "2023-01-18T03:26:20+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -10314,16 +9649,16 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.7.1",
+            "version": "4.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "a1acf96007170234a8399586a6e2ab8feba109d1"
+                "reference": "433b2014e3979047db08a17a205f410ba3869cf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/a1acf96007170234a8399586a6e2ab8feba109d1",
-                "reference": "a1acf96007170234a8399586a6e2ab8feba109d1",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/433b2014e3979047db08a17a205f410ba3869cf2",
+                "reference": "433b2014e3979047db08a17a205f410ba3869cf2",
                 "shasum": ""
             },
             "require": {
@@ -10390,7 +9725,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.7.1"
+                "source": "https://github.com/ramsey/uuid/tree/4.7.3"
             },
             "funding": [
                 {
@@ -10402,7 +9737,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-31T22:20:34+00:00"
+            "time": "2023-01-12T18:13:24+00:00"
         },
         {
             "name": "s9e/regexp-builder",
@@ -10994,16 +10329,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v5.4.11",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "ec79e03125c1d2477e43dde8528535d90cc78379"
+                "reference": "9bd60843443cda9638efdca7c41eb82ed0026179"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/ec79e03125c1d2477e43dde8528535d90cc78379",
-                "reference": "ec79e03125c1d2477e43dde8528535d90cc78379",
+                "url": "https://api.github.com/repos/symfony/config/zipball/9bd60843443cda9638efdca7c41eb82ed0026179",
+                "reference": "9bd60843443cda9638efdca7c41eb82ed0026179",
                 "shasum": ""
             },
             "require": {
@@ -11053,7 +10388,7 @@
             "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/config/tree/v5.4.11"
+                "source": "https://github.com/symfony/config/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -11069,20 +10404,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-20T13:00:38+00:00"
+            "time": "2023-01-08T13:23:55+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "58422fdcb0e715ed05b385f70d3e8b5ed4bbd45f"
+                "reference": "dccb8d251a9017d5994c988b034d3e18aaabf740"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/58422fdcb0e715ed05b385f70d3e8b5ed4bbd45f",
-                "reference": "58422fdcb0e715ed05b385f70d3e8b5ed4bbd45f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/dccb8d251a9017d5994c988b034d3e18aaabf740",
+                "reference": "dccb8d251a9017d5994c988b034d3e18aaabf740",
                 "shasum": ""
             },
             "require": {
@@ -11152,7 +10487,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.4.17"
+                "source": "https://github.com/symfony/console/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -11168,20 +10503,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-28T14:15:31+00:00"
+            "time": "2023-01-01T08:32:19+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v6.2.3",
+            "version": "v6.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "ab1df4ba3ded7b724766ba3a6e0eca0418e74f80"
+                "reference": "bf1b9d4ad8b1cf0dbde8b08e0135a2f6259b9ba1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/ab1df4ba3ded7b724766ba3a6e0eca0418e74f80",
-                "reference": "ab1df4ba3ded7b724766ba3a6e0eca0418e74f80",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/bf1b9d4ad8b1cf0dbde8b08e0135a2f6259b9ba1",
+                "reference": "bf1b9d4ad8b1cf0dbde8b08e0135a2f6259b9ba1",
                 "shasum": ""
             },
             "require": {
@@ -11217,7 +10552,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v6.2.3"
+                "source": "https://github.com/symfony/css-selector/tree/v6.2.5"
             },
             "funding": [
                 {
@@ -11233,7 +10568,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-28T14:26:22+00:00"
+            "time": "2023-01-01T08:38:09+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -11304,16 +10639,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "8e18a9d559eb8ebc2220588f1faa726a2fcd31c9"
+                "reference": "abf49cc084c087d94b4cb939c3f3672971784e0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/8e18a9d559eb8ebc2220588f1faa726a2fcd31c9",
-                "reference": "8e18a9d559eb8ebc2220588f1faa726a2fcd31c9",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/abf49cc084c087d94b4cb939c3f3672971784e0c",
+                "reference": "abf49cc084c087d94b4cb939c3f3672971784e0c",
                 "shasum": ""
             },
             "require": {
@@ -11369,7 +10704,7 @@
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher/tree/v5.4.17"
+                "source": "https://github.com/symfony/event-dispatcher/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -11385,7 +10720,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-12T15:54:21+00:00"
+            "time": "2023-01-01T08:32:19+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -11468,16 +10803,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v6.2.0",
+            "version": "v6.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "50b2523c874605cf3d4acf7a9e2b30b6a440a016"
+                "reference": "e59e8a4006afd7f5654786a83b4fcb8da98f4593"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/50b2523c874605cf3d4acf7a9e2b30b6a440a016",
-                "reference": "50b2523c874605cf3d4acf7a9e2b30b6a440a016",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/e59e8a4006afd7f5654786a83b4fcb8da98f4593",
+                "reference": "e59e8a4006afd7f5654786a83b4fcb8da98f4593",
                 "shasum": ""
             },
             "require": {
@@ -11511,7 +10846,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v6.2.0"
+                "source": "https://github.com/symfony/filesystem/tree/v6.2.5"
             },
             "funding": [
                 {
@@ -11527,20 +10862,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-20T13:01:27+00:00"
+            "time": "2023-01-20T17:45:48+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "40c08632019838dfb3350f18cf5563b8080055fc"
+                "reference": "6071aebf810ad13fe8200c224f36103abb37cf1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/40c08632019838dfb3350f18cf5563b8080055fc",
-                "reference": "40c08632019838dfb3350f18cf5563b8080055fc",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/6071aebf810ad13fe8200c224f36103abb37cf1f",
+                "reference": "6071aebf810ad13fe8200c224f36103abb37cf1f",
                 "shasum": ""
             },
             "require": {
@@ -11574,7 +10909,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.4.17"
+                "source": "https://github.com/symfony/finder/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -11590,20 +10925,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-22T10:31:03+00:00"
+            "time": "2023-01-14T19:14:44+00:00"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "b64a0e2df212d5849e4584cabff0cf09c5d6866a"
+                "reference": "70fd0eb8a1570ba119d5e496c8ee79bf9f0b51b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b64a0e2df212d5849e4584cabff0cf09c5d6866a",
-                "reference": "b64a0e2df212d5849e4584cabff0cf09c5d6866a",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/70fd0eb8a1570ba119d5e496c8ee79bf9f0b51b0",
+                "reference": "70fd0eb8a1570ba119d5e496c8ee79bf9f0b51b0",
                 "shasum": ""
             },
             "require": {
@@ -11650,7 +10985,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v5.4.17"
+                "source": "https://github.com/symfony/http-foundation/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -11666,20 +11001,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-14T08:23:03+00:00"
+            "time": "2023-01-01T08:32:19+00:00"
         },
         {
             "name": "symfony/mime",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "2a83d82efc91c3f03a23c8b47a896df168aa5c63"
+                "reference": "a858429a9c704edc53fe057228cf9ca282ba48eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/2a83d82efc91c3f03a23c8b47a896df168aa5c63",
-                "reference": "2a83d82efc91c3f03a23c8b47a896df168aa5c63",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/a858429a9c704edc53fe057228cf9ca282ba48eb",
+                "reference": "a858429a9c704edc53fe057228cf9ca282ba48eb",
                 "shasum": ""
             },
             "require": {
@@ -11697,7 +11032,7 @@
                 "symfony/serializer": "<5.4.14|>=6.0,<6.0.14|>=6.1,<6.1.6"
             },
             "require-dev": {
-                "egulias/email-validator": "^2.1.10|^3.1",
+                "egulias/email-validator": "^2.1.10|^3.1|^4",
                 "phpdocumentor/reflection-docblock": "^3.0|^4.0|^5.0",
                 "symfony/dependency-injection": "^4.4|^5.0|^6.0",
                 "symfony/property-access": "^4.4|^5.1|^6.0",
@@ -11734,7 +11069,7 @@
                 "mime-type"
             ],
             "support": {
-                "source": "https://github.com/symfony/mime/tree/v5.4.17"
+                "source": "https://github.com/symfony/mime/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -11750,7 +11085,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-13T09:59:55+00:00"
+            "time": "2023-01-09T05:43:46+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -12655,16 +11990,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v5.4.11",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "6e75fe6874cbc7e4773d049616ab450eff537bf1"
+                "reference": "c5ba874c9b636dbccf761e22ce750e88ec3f55e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/6e75fe6874cbc7e4773d049616ab450eff537bf1",
-                "reference": "6e75fe6874cbc7e4773d049616ab450eff537bf1",
+                "url": "https://api.github.com/repos/symfony/process/zipball/c5ba874c9b636dbccf761e22ce750e88ec3f55e1",
+                "reference": "c5ba874c9b636dbccf761e22ce750e88ec3f55e1",
                 "shasum": ""
             },
             "require": {
@@ -12697,7 +12032,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v5.4.11"
+                "source": "https://github.com/symfony/process/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -12713,7 +12048,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-27T16:58:25+00:00"
+            "time": "2023-01-01T08:32:19+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -12800,16 +12135,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v6.2.2",
+            "version": "v6.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "863219fd713fa41cbcd285a79723f94672faff4d"
+                "reference": "b2dac0fa27b1ac0f9c0c0b23b43977f12308d0b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/863219fd713fa41cbcd285a79723f94672faff4d",
-                "reference": "863219fd713fa41cbcd285a79723f94672faff4d",
+                "url": "https://api.github.com/repos/symfony/string/zipball/b2dac0fa27b1ac0f9c0c0b23b43977f12308d0b0",
+                "reference": "b2dac0fa27b1ac0f9c0c0b23b43977f12308d0b0",
                 "shasum": ""
             },
             "require": {
@@ -12866,7 +12201,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.2.2"
+                "source": "https://github.com/symfony/string/tree/v6.2.5"
             },
             "funding": [
                 {
@@ -12882,20 +12217,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-14T16:11:27+00:00"
+            "time": "2023-01-01T08:38:09+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v5.4.14",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "f0ed07675863aa6e3939df8b1bc879450b585cab"
+                "reference": "83d487b13b7fb4c0a6ad079f4e4c9b4525e1b695"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/f0ed07675863aa6e3939df8b1bc879450b585cab",
-                "reference": "f0ed07675863aa6e3939df8b1bc879450b585cab",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/83d487b13b7fb4c0a6ad079f4e4c9b4525e1b695",
+                "reference": "83d487b13b7fb4c0a6ad079f4e4c9b4525e1b695",
                 "shasum": ""
             },
             "require": {
@@ -12963,7 +12298,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v5.4.14"
+                "source": "https://github.com/symfony/translation/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -12979,7 +12314,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-07T08:01:20+00:00"
+            "time": "2023-01-01T08:32:19+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -13061,16 +12396,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "edcdc11498108f8967fe95118a7ec8624b94760e"
+                "reference": "71c05db20cb9b54d381a28255f17580e2b7e36a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/edcdc11498108f8967fe95118a7ec8624b94760e",
-                "reference": "edcdc11498108f8967fe95118a7ec8624b94760e",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/71c05db20cb9b54d381a28255f17580e2b7e36a5",
+                "reference": "71c05db20cb9b54d381a28255f17580e2b7e36a5",
                 "shasum": ""
             },
             "require": {
@@ -13116,7 +12451,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.4.17"
+                "source": "https://github.com/symfony/yaml/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -13132,7 +12467,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-13T09:57:04+00:00"
+            "time": "2023-01-10T18:51:14+00:00"
         },
         {
             "name": "the-turk/flarum-stickiest",
