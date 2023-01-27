@@ -7,7 +7,6 @@ on:
 env:
   FLARUM: ghcr.io/viva-la-vita/flarum
   NGINX: ghcr.io/viva-la-vita/nginx
-  SONIC: ghcr.io/viva-la-vita/sonic
 
 jobs:
   build:
@@ -41,11 +40,3 @@ jobs:
           target: production
           cache-from: type=registry,ref=${{ env.NGINX }}:buildcache
           cache-to: type=registry,ref=${{ env.NGINX }}:buildcache,mode=max
-      - name: Build and push Sonic
-        uses: docker/build-push-action@v2
-        with:
-          context: ./sonic
-          push: true
-          tags: ${{ env.SONIC }}
-          cache-from: type=registry,ref=${{ env.SONIC }}:buildcache
-          cache-to: type=registry,ref=${{ env.SONIC }}:buildcache,mode=max

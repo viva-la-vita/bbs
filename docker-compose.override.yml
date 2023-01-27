@@ -4,7 +4,7 @@ services:
     build:
       context: ./flarum
     environment:
-      URL: http://localhost:4000
+      URL: http://localhost:${HTTP_PORT}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
@@ -26,8 +26,3 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/conf.d:/etc/nginx/conf.d
-
-  sonic:
-    image: valeriansaliou/sonic:v1.4.0
-    volumes:
-      - ./sonic/sonic.cfg:/etc/sonic.cfg

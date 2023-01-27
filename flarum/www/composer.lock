@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5ca150eab32c77674a676a3208c91fb",
+    "content-hash": "e08f0a6181e06fde4208df0c49387476",
     "packages": [
         {
             "name": "askvortsov/flarum-pwa",
@@ -3345,75 +3345,6 @@
             "time": "2022-10-07T15:11:18+00:00"
         },
         {
-            "name": "fof/forum-statistics-widget",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfFlarum/forum-statistics-widget.git",
-                "reference": "3b00d7b185546fdabfa894ea6e81316d67b183d3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/forum-statistics-widget/zipball/3b00d7b185546fdabfa894ea6e81316d67b183d3",
-                "reference": "3b00d7b185546fdabfa894ea6e81316d67b183d3",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.0.0"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "FoF Forum Statistics Widget",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-chart-bar",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
-                "flagrow": {
-                    "discuss": "https://discuss.flarum.org/d/22380"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FoF\\ForumStatisticsWidget\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lopez",
-                    "email": "me@ralkage.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Add a forum statistics widget to the sidenav section of your Flarum forum.",
-            "homepage": "https://friendsofflarum.org",
-            "keywords": [
-                "flarum",
-                "forum",
-                "statistics",
-                "widget"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/22380",
-                "issues": "https://github.com/FriendsOfFlarum/forum-statistics-widget/issues",
-                "source": "https://github.com/FriendsOfFlarum/forum-statistics-widget"
-            },
-            "funding": [
-                {
-                    "url": "https://opencollective.com/fof/donate",
-                    "type": "website"
-                }
-            ],
-            "time": "2021-11-26T02:06:36+00:00"
-        },
-        {
             "name": "fof/frontpage",
             "version": "1.1.0",
             "source": {
@@ -5035,63 +4966,6 @@
                 "source": "https://github.com/franzliedke/whoops-middleware/tree/2.0.0"
             },
             "time": "2021-01-03T01:30:07+00:00"
-        },
-        {
-            "name": "ganuonglachanh/sonic",
-            "version": "0.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ganuonglachanh/flarum-sonic.git",
-                "reference": "93820ad5253e3787e99824de6c53706fb5223e73"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ganuonglachanh/flarum-sonic/zipball/93820ad5253e3787e99824de6c53706fb5223e73",
-                "reference": "93820ad5253e3787e99824de6c53706fb5223e73",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": ">=1.0",
-                "ppshobi/psonic": "^2.0.1"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-extension": {
-                    "title": "Search By Sonic",
-                    "icon": {
-                        "name": "fa fa-search",
-                        "backgroundColor": "#1976D2",
-                        "color": "#f44336"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GaNuongLaChanh\\Sonic\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "GaNuongLaChanh",
-                    "email": "ganuonglachanh@outlook.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Allows to search by sonic",
-            "keywords": [
-                "flarum",
-                "search",
-                "sonic"
-            ],
-            "support": {
-                "issues": "https://github.com/ganuonglachanh/flarum-sonic/issues",
-                "source": "https://github.com/ganuonglachanh/flarum-sonic"
-            },
-            "time": "2021-09-02T14:28:55+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -8943,55 +8817,6 @@
                 "source": "https://github.com/PipecraftNet/flarum-ext-id-slug"
             },
             "time": "2021-09-07T16:45:57+00:00"
-        },
-        {
-            "name": "ppshobi/psonic",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ppshobi/psonic.git",
-                "reference": "2087d0eb8bf8c3b53e19fa127fba3b6bf1c61951"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ppshobi/psonic/zipball/2087d0eb8bf8c3b53e19fa127fba3b6bf1c61951",
-                "reference": "2087d0eb8bf8c3b53e19fa127fba3b6bf1c61951",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.3|^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.0|^9.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Psonic\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Shobi P P",
-                    "email": "ppshobi@gmail.com"
-                }
-            ],
-            "description": "PHP client for Sonic Search Engine",
-            "keywords": [
-                "auto suggestion",
-                "psonic",
-                "search engine",
-                "sonic"
-            ],
-            "support": {
-                "issues": "https://github.com/ppshobi/psonic/issues",
-                "source": "https://github.com/ppshobi/psonic/tree/v2.1.0"
-            },
-            "time": "2022-11-01T11:37:31+00:00"
         },
         {
             "name": "psr/container",

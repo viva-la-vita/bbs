@@ -46,7 +46,6 @@
         "fof/drafts": "*",
         "fof/filter": "*",
         "fof/follow-tags": "*",
-        "fof/forum-statistics-widget": "*",
         "fof/frontpage": "*",
         "fof/linguist": "*",
         "fof/links": "*",
@@ -68,7 +67,6 @@
         "fof/user-bio": "*",
         "fof/user-directory": "*",
         "fof/username-request": "*",
-        "ganuonglachanh/sonic": "*",
         "league/flysystem-aws-s3-v3": "*",
         "pipecraft/flarum-ext-id-slug": "*",
         "the-turk/flarum-stickiest": "*"
