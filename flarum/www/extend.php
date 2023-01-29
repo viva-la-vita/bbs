@@ -9,6 +9,4 @@
 
 use Flarum\Extend;
 
-return [
-    // Register extenders here to customize your forum!
-];
+return [];

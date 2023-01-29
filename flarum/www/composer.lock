@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e08f0a6181e06fde4208df0c49387476",
+    "content-hash": "073609defe7cddd89e8d54c6c48a68cc",
     "packages": [
         {
             "name": "askvortsov/flarum-pwa",
@@ -118,16 +118,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.257.9",
+            "version": "3.257.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "97c41c42690e4fd7846915eae520e508d71c0baf"
+                "reference": "c1168bc3f6a6f370ff400774fdf421c57db31707"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/97c41c42690e4fd7846915eae520e508d71c0baf",
-                "reference": "97c41c42690e4fd7846915eae520e508d71c0baf",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c1168bc3f6a6f370ff400774fdf421c57db31707",
+                "reference": "c1168bc3f6a6f370ff400774fdf421c57db31707",
                 "shasum": ""
             },
             "require": {
@@ -206,9 +206,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.257.9"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.257.10"
             },
-            "time": "2023-01-26T19:21:26+00:00"
+            "time": "2023-01-27T19:23:30+00:00"
         },
         {
             "name": "axy/backtrace",
@@ -12407,6 +12407,33 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.6"
             },
             "time": "2023-01-03T09:29:04+00:00"
+        },
+        {
+            "name": "viva-la-vita/bbs-frontend",
+            "version": "0.1.0",
+            "dist": {
+                "type": "path",
+                "url": "packages/bbs-frontend",
+                "reference": "34f6072170545f0a6ab32c77f4238c36bc99ab30"
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Frontend",
+                    "icon": {
+                        "name": "fas fa-smile",
+                        "backgroundColor": "#238c59",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "description": "Say hello to the world!",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "voku/portable-ascii",
