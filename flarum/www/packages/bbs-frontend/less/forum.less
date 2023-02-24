@@ -3,10 +3,16 @@
   input {
     width: 100%;
   }
+  input::placeholder {
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {
   .IndexPage-searchbar {
+    display: none;
+  }
+  .WelcomeHero {
     display: none;
   }
 }
@@ -21,5 +27,22 @@
   &:active,
   &.active {
     box-shadow: none;
+  }
+}
+
+h2.Hero-title {
+  margin-bottom: 1rem;
+}
+
+.Hero-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  .Button {
+    background-color: var(--body-bg);
   }
 }

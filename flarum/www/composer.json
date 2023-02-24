@@ -53,6 +53,7 @@
         "fof/moderator-notes": "*",
         "fof/nightmode": "*",
         "fof/oauth": "*",
+        "fof/pages": "*",
         "fof/polls": "*",
         "fof/pretty-mail": "*",
         "fof/profile-image-crop": "*",
