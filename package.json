@@ -1,0 +1,11 @@
+{
+    "type": "module",
+    "devDependencies": {
+        "axios": "^1.7.2",
+        "csv": "^6.3.10"
+    },
+    "dependencies": {
+        "@types/node": "^22.5.0",
+        "dotenv": "^16.4.5"
+    }
+}
