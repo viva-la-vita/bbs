@@ -1,7 +1,7 @@
 import axios from "axios";
 import { config } from "./utils";
 
-let offset = 8750;
+let offset = 25000;
 
 for (let i = 0; i < 200; i++) {
   console.log(`Offset: ${offset}`);
@@ -18,7 +18,6 @@ for (let i = 0; i < 200; i++) {
     const { isEmailConfirmed, discussionCount, commentCount } = attributes;
     if (!isEmailConfirmed && discussionCount === 0 && commentCount === 0) {
       console.log(id);
-      if (id > 35000) continue;
       const deleteResult = axios.delete(`/api/users/${id}`, config);
       promises.push(deleteResult);
     }
