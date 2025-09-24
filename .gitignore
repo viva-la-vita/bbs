@@ -2,3 +2,7 @@ vendor
 .env
 node_modules
 dist
+flarum/www/public
+public_backup.tar
+flarum_backup.sql
+public_backup.tar.gz
