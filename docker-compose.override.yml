@@ -12,14 +12,17 @@ services:
       - ./flarum/www/public:/var/www/flarum/public
       - ./flarum/php/zzz-flarum.conf:/usr/local/etc/php-fpm.d/zzz-flarum.conf
       - ./flarum/php/flarum.ini:/usr/local/etc/php/conf.d/flarum.ini
-      - ./flarum/www/packages:/var/www/flarum/packages
-      - ./flarum/www/vendor:/var/www/flarum/vendor
+      # - ./flarum/www/packages:/var/www/flarum/packages
+      # - ./flarum/www/vendor:/var/www/flarum/vendor
       - ./flarum/www/flarum:/var/www/flarum/flarum
       - ./flarum/www/config.php:/var/www/flarum/config.php
       - ./flarum/www/extend.php:/var/www/flarum/extend.php
       - ./flarum/www/site.php:/var/www/flarum/site.php
       - ./flarum/www/composer.json:/var/www/flarum/composer.json
       - ./flarum/www/composer.lock:/var/www/flarum/composer.lock
+      - storage:/var/www/flarum/storage
+      
+    # command: sh -c "chmod -R 777 /var/www/flarum/storage && php-fpm"
 
   nginx:
     image: ghcr.io/viva-la-vita/nginx:development
