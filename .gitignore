@@ -6,3 +6,4 @@ flarum/www/public
 public_backup.tar
 flarum_backup.sql
 public_backup.tar.gz
+*.sql
