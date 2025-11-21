@@ -42,3 +42,7 @@ COPY www/config.php www/extend.php www/site.php www/flarum ./
 ENTRYPOINT ["docker-php-entrypoint"]
 
 CMD ["php-fpm"]
+
+RUN mkdir -p /var/www/flarum/storage && \
+    chown -R www-data:www-data /var/www/flarum/storage && \
+    chmod -R 775 /var/www/flarum/storage
