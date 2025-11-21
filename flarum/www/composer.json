@@ -22,6 +22,7 @@
     },
     "require": {
         "askvortsov/flarum-pwa": "*",
+        "clarkwinkelmann/flarum-ext-post-stream-search": "^1.1",
         "flarum-lang/chinese-simplified": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",

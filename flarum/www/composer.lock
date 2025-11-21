@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "324f416bee2b739e817550153204a980",
+    "content-hash": "5da102e2737d7d771e813a1a6b27bac6",
     "packages": [
         {
             "name": "askvortsov/flarum-pwa",
@@ -421,6 +421,73 @@
                 }
             ],
             "time": "2023-10-01T12:35:29+00:00"
+        },
+        {
+            "name": "clarkwinkelmann/flarum-ext-post-stream-search",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/clarkwinkelmann/flarum-ext-post-stream-search.git",
+                "reference": "673fa9d19ff5e79f6629d78abc885cd531968243"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clarkwinkelmann/flarum-ext-post-stream-search/zipball/673fa9d19ff5e79f6629d78abc885cd531968243",
+                "reference": "673fa9d19ff5e79f6629d78abc885cd531968243",
+                "shasum": ""
+            },
+            "require": {
+                "flamarkt/backoffice": "^0.1.2",
+                "flarum/core": "^1.2"
+            },
+            "suggest": {
+                "clarkwinkelmann/flarum-ext-advanced-search-highlight": "*",
+                "clarkwinkelmann/flarum-ext-scout": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-search",
+                        "color": "#fff",
+                        "backgroundColor": "#684ba6"
+                    },
+                    "title": "Post Stream Search",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "clarkwinkelmann/flarum-ext-scout"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ClarkWinkelmann\\PostStreamSearch\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Filter post stream by keyword or other criteria.",
+            "keywords": [
+                "flarum",
+                "search",
+                "stream"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/32017",
+                "issues": "https://github.com/clarkwinkelmann/flarum-ext-post-stream-search/issues",
+                "source": "https://github.com/clarkwinkelmann/flarum-ext-post-stream-search"
+            },
+            "time": "2023-05-08T16:16:11+00:00"
         },
         {
             "name": "components/font-awesome",
@@ -1474,6 +1541,73 @@
                 "source": "https://github.com/firebase/php-jwt/tree/v6.11.1"
             },
             "time": "2025-04-09T20:32:01+00:00"
+        },
+        {
+            "name": "flamarkt/backoffice",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flamarkt/backoffice.git",
+                "reference": "ef526cd0ad04c47d0f5decdb1c2f0c57429882f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flamarkt/backoffice/zipball/ef526cd0ad04c47d0f5decdb1c2f0c57429882f2",
+                "reference": "ef526cd0ad04c47d0f5decdb1c2f0c57429882f2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "flarum/core": "^1.2"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-tachometer-alt",
+                        "color": "#fff",
+                        "backgroundColor": "#266a13"
+                    },
+                    "title": "Backoffice",
+                    "category": "feature"
+                },
+                "flamarkt-backoffice": {
+                    "showInBackoffice": true,
+                    "settingsInBackoffice": true
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Flamarkt\\Backoffice\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Flamarkt",
+                    "homepage": "https://flamarkt.org/"
+                }
+            ],
+            "description": "Starting point for Flamarkt extensions.",
+            "keywords": [
+                "admin",
+                "backoffice",
+                "flamarkt",
+                "flarum",
+                "panel"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/30498",
+                "issues": "https://github.com/flamarkt/backoffice/issues",
+                "source": "https://github.com/flamarkt/backoffice"
+            },
+            "time": "2024-06-01T14:10:48+00:00"
         },
         {
             "name": "flarum-lang/chinese-simplified",
