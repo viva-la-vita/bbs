@@ -22,6 +22,7 @@
     },
     "require": {
         "askvortsov/flarum-pwa": "*",
+        "blomstra/turnstile": "^0.1.6",
         "clarkwinkelmann/flarum-ext-post-stream-search": "^1.1",
         "flarum-lang/chinese-simplified": "*",
         "flarum/approval": "*",

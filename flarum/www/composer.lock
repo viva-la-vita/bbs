@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5da102e2737d7d771e813a1a6b27bac6",
+    "content-hash": "bea86ba2984c9cd9e8406db82e38056d",
     "packages": [
         {
             "name": "askvortsov/flarum-pwa",
@@ -292,6 +292,86 @@
                 "source": "https://github.com/axypro/backtrace/tree/2.0.0"
             },
             "time": "2019-02-02T18:01:31+00:00"
+        },
+        {
+            "name": "blomstra/turnstile",
+            "version": "0.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blomstra/flarum-ext-turnstile.git",
+                "reference": "49e3852b61ba6662cd1150852e2d7e5a3fa1fb13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blomstra/flarum-ext-turnstile/zipball/49e3852b61ba6662cd1150852e2d7e5a3fa1fb13",
+                "reference": "49e3852b61ba6662cd1150852e2d7e5a3fa1fb13",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.0",
+                "guzzlehttp/guzzle": "^7.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "locale": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": true,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-robot",
+                        "color": "#3a98d0",
+                        "backgroundColor": "#ebf1fd"
+                    },
+                    "title": "Turnstile",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Blomstra\\Turnstile\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Blomstra team",
+                    "email": "development@blomstra.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Implement Cloudflare Turnstile into your Flarum forum.",
+            "homepage": "https://blomstra.net",
+            "keywords": [
+                "captcha",
+                "cloudflare",
+                "flarum",
+                "turnstile"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/31790",
+                "issues": "https://github.com/blomstra/flarum-ext-turnstile/issues",
+                "source": "https://github.com/blomstra/flarum-ext-turnstile"
+            },
+            "abandoned": "blazite/flarum-turnstile",
+            "time": "2024-10-15T09:29:49+00:00"
         },
         {
             "name": "brick/math",
