@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bea86ba2984c9cd9e8406db82e38056d",
+    "content-hash": "d793013ff1432568fb93fb12886b54f1",
     "packages": [
         {
             "name": "askvortsov/flarum-pwa",
@@ -292,6 +292,63 @@
                 "source": "https://github.com/axypro/backtrace/tree/2.0.0"
             },
             "time": "2019-02-02T18:01:31+00:00"
+        },
+        {
+            "name": "blomstra/no-email-notifications",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blomstra/flarum-ext-no-email-notifications.git",
+                "reference": "396857d63e29e8d8c4264fdb19ca9286fca61ce1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blomstra/flarum-ext-no-email-notifications/zipball/396857d63e29e8d8c4264fdb19ca9286fca61ce1",
+                "reference": "396857d63e29e8d8c4264fdb19ca9286fca61ce1",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-inbox",
+                        "color": "#3a98d0",
+                        "backgroundColor": "#EBF1FD"
+                    },
+                    "title": "No Email Notifications",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Blomstra\\NoEmail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "IanM",
+                    "email": "ian@blomstra.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Remove the email notification driver from Flarum",
+            "homepage": "https://blomstra.net",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/",
+                "issues": "https://github.com/blomstra/flarum-ext-no-email-notifications/issues",
+                "source": "https://github.com/blomstra/flarum-ext-no-email-notifications"
+            },
+            "time": "2021-11-02T20:36:18+00:00"
         },
         {
             "name": "blomstra/turnstile",
