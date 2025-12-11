@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d793013ff1432568fb93fb12886b54f1",
+    "content-hash": "3f7022f52944966d8e832d52c4c2c40e",
     "packages": [
         {
             "name": "askvortsov/flarum-pwa",
@@ -349,86 +349,6 @@
                 "source": "https://github.com/blomstra/flarum-ext-no-email-notifications"
             },
             "time": "2021-11-02T20:36:18+00:00"
-        },
-        {
-            "name": "blomstra/turnstile",
-            "version": "0.1.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/blomstra/flarum-ext-turnstile.git",
-                "reference": "49e3852b61ba6662cd1150852e2d7e5a3fa1fb13"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/blomstra/flarum-ext-turnstile/zipball/49e3852b61ba6662cd1150852e2d7e5a3fa1fb13",
-                "reference": "49e3852b61ba6662cd1150852e2d7e5a3fa1fb13",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.8.0",
-                "guzzlehttp/guzzle": "^7.0"
-            },
-            "type": "flarum-extension",
-            "extra": {
-                "flarum-cli": {
-                    "modules": {
-                        "js": true,
-                        "css": true,
-                        "admin": true,
-                        "forum": true,
-                        "locale": true,
-                        "gitConf": true,
-                        "styleci": true,
-                        "jsCommon": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "editorConfig": true,
-                        "githubActions": true,
-                        "backendTesting": false
-                    }
-                },
-                "flarum-extension": {
-                    "icon": {
-                        "name": "fas fa-robot",
-                        "color": "#3a98d0",
-                        "backgroundColor": "#ebf1fd"
-                    },
-                    "title": "Turnstile",
-                    "category": "feature"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Blomstra\\Turnstile\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Blomstra team",
-                    "email": "development@blomstra.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Implement Cloudflare Turnstile into your Flarum forum.",
-            "homepage": "https://blomstra.net",
-            "keywords": [
-                "captcha",
-                "cloudflare",
-                "flarum",
-                "turnstile"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/31790",
-                "issues": "https://github.com/blomstra/flarum-ext-turnstile/issues",
-                "source": "https://github.com/blomstra/flarum-ext-turnstile"
-            },
-            "abandoned": "blazite/flarum-turnstile",
-            "time": "2024-10-15T09:29:49+00:00"
         },
         {
             "name": "brick/math",
@@ -3228,6 +3148,87 @@
                 }
             ],
             "time": "2025-10-03T11:14:51+00:00"
+        },
+        {
+            "name": "flectar/flarum-turnstile",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flectar/flarum-ext-turnstile.git",
+                "reference": "d56c41d43c04319bc6194253609dbbccec1da4a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flectar/flarum-ext-turnstile/zipball/d56c41d43c04319bc6194253609dbbccec1da4a2",
+                "reference": "d56c41d43c04319bc6194253609dbbccec1da4a2",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.0",
+                "guzzlehttp/guzzle": "^7.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "locale": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": true,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "image": "resources/assets/Cloudflare_Turnstile_logo.svg",
+                        "backgroundSize": "80%",
+                        "backgroundColor": "#ffffff",
+                        "backgroundRepeat": "no-repeat",
+                        "backgroundPosition": "center"
+                    },
+                    "title": "Cloudflare Turnstile",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Flectar\\Turnstile\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Flectar",
+                    "email": "tomas@flectar.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds Cloudflare Turnstile CAPTCHA protection to your Flarum forum.",
+            "homepage": "https://flectar.com/",
+            "keywords": [
+                "captcha",
+                "cloudflare",
+                "flarum",
+                "turnstile"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/",
+                "issues": "https://github.com/flectar/flarum-ext-turnstile/issues/",
+                "source": "https://github.com/flectar/flarum-ext-turnstile/"
+            },
+            "time": "2025-11-11T18:28:27+00:00"
         },
         {
             "name": "fof/best-answer",

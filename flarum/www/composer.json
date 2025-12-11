@@ -23,7 +23,6 @@
     "require": {
         "askvortsov/flarum-pwa": "*",
         "blomstra/no-email-notifications": "^0.1.0",
-        "blomstra/turnstile": "^0.1.6",
         "clarkwinkelmann/flarum-ext-post-stream-search": "^1.1",
         "flarum-lang/chinese-simplified": "*",
         "flarum/approval": "*",
@@ -43,6 +42,7 @@
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
         "flarum/tags": "*",
+        "flectar/flarum-turnstile": "^1.1",
         "fof/best-answer": "*",
         "fof/byobu": "*",
         "fof/default-user-preferences": "*",
