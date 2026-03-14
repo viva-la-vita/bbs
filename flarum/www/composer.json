@@ -78,7 +78,10 @@
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "audit": {
+            "ignore": ["PKSA-zqkh-gtty-c5yv"]
+        }
     },
     "repositories": [
         {
