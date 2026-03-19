@@ -23,4 +23,5 @@
         'poweredByHeader' => true,
         'referrerPolicy' => 'same-origin',
     ),
+    'trusted_proxies' => ['*'],
 );
