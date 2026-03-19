@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f7022f52944966d8e832d52c4c2c40e",
+    "content-hash": "9fd6251f03c86ffe96dbcda45dc116c3",
     "packages": [
         {
             "name": "askvortsov/flarum-pwa",
@@ -3231,6 +3231,107 @@
             "time": "2025-11-11T18:28:27+00:00"
         },
         {
+            "name": "fof/anti-spam",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/anti-spam.git",
+                "reference": "bdde035f45c704dd3dbf9f2ee6abf6e37da09dad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/anti-spam/zipball/bdde035f45c704dd3dbf9f2ee6abf6e37da09dad",
+                "reference": "bdde035f45c704dd3dbf9f2ee6abf6e37da09dad",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.0"
+            },
+            "replace": {
+                "fof/spamblock": "*",
+                "fof/stopforumspam": "*"
+            },
+            "require-dev": {
+                "flarum/approval": "*",
+                "flarum/flags": "^1.8",
+                "flarum/phpstan": "^1.8",
+                "flarum/suspend": "^1.8",
+                "flarum/tags": "*",
+                "flarum/testing": "^1.0.0",
+                "fof/oauth": "*",
+                "fof/user-bio": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "locale": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-shield-alt",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Anti Spam",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/suspend",
+                        "flarum/flags",
+                        "flarum/approval",
+                        "flarum/tags"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\AntiSpam\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "IanM",
+                    "email": "ian@flarum.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Effective tools to manage spammers on your community.",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/33698",
+                "issues": "https://github.com/FriendsOfFlarum/anti-spam/issues",
+                "source": "https://github.com/FriendsOfFlarum/anti-spam"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2025-10-17T20:40:01+00:00"
+        },
+        {
             "name": "fof/best-answer",
             "version": "1.6.5",
             "source": {
@@ -3805,6 +3906,80 @@
                 }
             ],
             "time": "2025-02-23T09:38:49+00:00"
+        },
+        {
+            "name": "fof/formatting",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/formatting.git",
+                "reference": "92b5e38ec28eebf153f298dd5dbaa8c73d6ed641"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/formatting/zipball/92b5e38ec28eebf153f298dd5dbaa8c73d6ed641",
+                "reference": "92b5e38ec28eebf153f298dd5dbaa8c73d6ed641",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/17770"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-font",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Formatting",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Formatting\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Customize TextFormatter with plugins through the admin interface",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/17770",
+                "issues": "https://github.com/FriendsOfFlarum/formatting/issues",
+                "source": "https://github.com/FriendsOfFlarum/formatting"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2025-11-10T22:03:00+00:00"
         },
         {
             "name": "fof/frontpage",
@@ -6227,6 +6402,84 @@
                 }
             ],
             "time": "2025-08-23T21:21:41+00:00"
+        },
+        {
+            "name": "huseyinfiliz/flagify",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/huseyinfiliz/flagify.git",
+                "reference": "2195f712ba4976c874588446b4ce47592e787099"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/huseyinfiliz/flagify/zipball/2195f712ba4976c874588446b4ce47592e787099",
+                "reference": "2195f712ba4976c874588446b4ce47592e787099",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/approval": "*",
+                "flarum/core": "^1.2.0",
+                "flarum/flags": "*"
+            },
+            "require-dev": {
+                "flarum/testing": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "locale": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": true,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-flag",
+                        "color": "#fff",
+                        "backgroundColor": "#3498db"
+                    },
+                    "title": "Flag to Unapprove",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "huseyinfiliz\\flagify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-1.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Huseyin Filiz",
+                    "email": "huseyinfiliz@pm.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Flarum extension that automatically hides posts receiving multiple flags.",
+            "keywords": [
+                "flag"
+            ],
+            "support": {
+                "issues": "https://github.com/huseyinfiliz/flagify/issues",
+                "source": "https://github.com/huseyinfiliz/flagify/tree/0.1"
+            },
+            "time": "2024-12-24T12:23:27+00:00"
         },
         {
             "name": "illuminate/bus",
