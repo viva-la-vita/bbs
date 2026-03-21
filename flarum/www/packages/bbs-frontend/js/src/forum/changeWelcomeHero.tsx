@@ -19,10 +19,10 @@ export default function () {
         { class: clsx('Button'), onclick: () => m.route.set('/p/2-telegram') },
         'Telegram 群组'
       ));
-      items.add('sponsor', Button.component(
-        { class: clsx('Button'), onclick: () => window.open('https://aifun.ltd/s96t3', '_blank') },
-        '[赞助]Ai强制调教课表💗'
-      ));
+      // items.add('sponsor', Button.component(
+      //   { class: clsx('Button'), onclick: () => window.open('https://aifun.ltd/s96t3', '_blank') },
+      //   '[赞助]Ai强制调教课表💗'
+      // ));
       return items;
     }
     return (
