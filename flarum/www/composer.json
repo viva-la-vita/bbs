@@ -46,6 +46,7 @@
         "flectar/flarum-turnstile": "^1.1",
         "huseyinfiliz/flagify": "*",
         "fof/anti-spam": "*",
+        "fof/ban-ips": "*",
         "fof/best-answer": "*",
         "fof/byobu": "*",
         "fof/default-user-preferences": "*",
