@@ -1,0 +1,24 @@
+{
+    "name": "viva-la-vita/bbs-filter",
+    "description": "Patch for fof/filter: fixes regex generation for user-supplied patterns and URLs",
+    "type": "flarum-extension",
+    "require": {
+        "flarum/core": "^1.2.0",
+        "fof/filter": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "VivalAvita\\BbsFilter\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "BBS Filter Patch",
+            "icon": {
+                "name": "fas fa-shield-alt",
+                "backgroundColor": "#c0392b",
+                "color": "#fff"
+            }
+        }
+    }
+}
