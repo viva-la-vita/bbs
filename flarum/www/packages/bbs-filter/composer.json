@@ -2,9 +2,9 @@
     "name": "viva-la-vita/bbs-filter",
     "description": "Patch for fof/filter: fixes regex generation for user-supplied patterns and URLs",
     "type": "flarum-extension",
+    "version": "1.0.0",
     "require": {
-        "flarum/core": "^1.2.0",
-        "fof/filter": "*"
+        "flarum/core": "^1.2.0"
     },
     "autoload": {
         "psr-4": {
