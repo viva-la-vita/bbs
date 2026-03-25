@@ -32,8 +32,27 @@ docker exec bbs-flarum-1 rm -rf /var/www/flarum/public/assets/
 docker exec bbs-flarum-1 php flarum assets:publish
 ```
 
-### 第五步：浏览器强制刷新
+### 第五步：清除缓存
+```bash
+docker exec bbs-flarum-1 php flarum cache:clear
+```
+
+### 第六步：浏览器强制刷新
 - `Ctrl+Shift+R` 或用无痕模式验证
+
+---
+
+## 故障排查
+
+### 白屏（JS 崩溃）
+**症状**：页面一片空白，浏览器 Console 报 `TypeError: Cannot read properties of undefined (reading 'type')`
+
+**原因**：Flarum 清缓存后重建时，偶发性地把坏数据写入缓存，导致预加载 API 数据异常。
+
+**解决**：再跑一次 `cache:clear` 即可：
+```bash
+docker exec bbs-flarum-1 php flarum cache:clear
+```
 
 ---
 
