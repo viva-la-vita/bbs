@@ -40,8 +40,11 @@ docker compose up -d --no-deps flarum
 | `assets/extensions/` | `assets:publish` 发布 | ✅ 可删，会重新发布 |
 | `assets/fonts/` | `assets:publish` 发布（Font Awesome） | ✅ 可删，会重新发布 |
 | `assets/avatars/` | 用户上传的头像 | ❌ 绝对不能删 |
+| `assets/polls/` | 投票帖子配图（fof/polls 扩展） | ❌ 绝对不能删 |
 | `assets/logo-*.png` | 管理员在后台上传的 Logo | ❌ 绝对不能删 |
 | `assets/favicon-*.png` | 管理员在后台上传的 Favicon | ❌ 绝对不能删 |
+| `assets/pwa-icon-*.png` | PWA 扩展上传的应用图标 | ❌ 绝对不能删 |
+| `assets/fof-upload-watermark-*` | fof/upload 扩展的水印图片 | ❌ 绝对不能删 |
 
 只删编译产物，完整保留用户数据：
 ```bash
@@ -84,5 +87,5 @@ docker exec bbs-flarum-1 php flarum cache:clear
 ## 注意事项
 - `public/assets/` 是 Docker volume，**不会随镜像更新自动替换**，必须手动删除旧资产再重新发布
 - 如果不删除旧资产直接 `assets:publish`，可能不会覆盖已存在的文件
-- **`avatars/`、`logo-*.png`、`favicon-*.png` 均为用户/管理员上传的数据，清理资产时必须完整保留**
-- **当前自动备份（`new_flarum_backup.sh`）只备份数据库 SQL，不备份 `assets/` 下的用户数据**。如文件丢失，只能从手动 tar 包恢复，且可能不完整。建议将 `avatars/`、`logo-*.png`、`favicon-*.png` 纳入备份脚本。
+- **`avatars/`、`polls/`、`logo-*.png`、`favicon-*.png`、`pwa-icon-*.png`、`fof-upload-watermark-*` 均为用户/管理员上传的数据，清理资产时必须完整保留**
+- **当前自动备份（`new_flarum_backup.sh`）只备份数据库 SQL，不备份 `assets/` 下的用户数据**。如文件丢失，只能从手动 tar 包恢复，且可能不完整。建议将以上用户数据目录和文件纳入备份脚本。
