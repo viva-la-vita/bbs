@@ -1,0 +1,26 @@
+{
+    "name": "viva-la-vita/bbs-antispam",
+    "description": "Auto-suspend users who receive flags from multiple established members",
+    "type": "flarum-extension",
+    "version": "1.0.0",
+    "require": {
+        "flarum/core": "^1.2.0",
+        "flarum/flags": "*",
+        "flarum/suspend": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "VivalAvita\\BbsAntispam\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "BBS Anti-Spam",
+            "icon": {
+                "name": "fas fa-user-slash",
+                "backgroundColor": "#c0392b",
+                "color": "#fff"
+            }
+        }
+    }
+}
