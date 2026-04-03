@@ -27,8 +27,15 @@ docker compose up -d --no-deps flarum
 ```
 
 ### 第四步：强制重新发布静态资产（关键步骤）
+
+> ⚠️ **警告：绝对不能使用 `rm -rf /var/www/flarum/public/assets/`**
+> 该命令会连同用户上传的头像（`avatars/` 目录）一并删除，造成不可恢复的数据丢失。
+> 2026 年 3 月曾因此删掉 5000+ 用户头像，仅能从旧备份部分恢复。
+
+只删编译产物，保留用户数据：
 ```bash
-docker exec bbs-flarum-1 rm -rf /var/www/flarum/public/assets/
+docker exec bbs-flarum-1 find /var/www/flarum/public/assets/ -maxdepth 1 -type f -delete
+docker exec bbs-flarum-1 rm -rf /var/www/flarum/public/assets/extensions
 docker exec bbs-flarum-1 php flarum assets:publish
 ```
 
@@ -59,3 +66,5 @@ docker exec bbs-flarum-1 php flarum cache:clear
 ## 注意事项
 - `public/assets/` 是 Docker volume，**不会随镜像更新自动替换**，必须手动删除旧资产再重新发布
 - 如果不删除旧资产直接 `assets:publish`，可能不会覆盖已存在的文件
+- **`avatars/` 是用户上传的头像，属于用户数据，清理资产时必须保留**
+- **当前自动备份（`new_flarum_backup.sh`）只备份数据库 SQL，不备份头像文件**。如头像丢失，只能从手动 tar 包恢复，且可能不完整。建议将头像目录纳入备份脚本。
