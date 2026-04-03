@@ -49,8 +49,8 @@ docker compose up -d --no-deps flarum
 只删编译产物，完整保留用户数据：
 ```bash
 # 只删 assets 根目录下的编译文件（按扩展名过滤，logo-*.png / favicon-*.png 不受影响）
-docker exec bbs-flarum-1 find /var/www/flarum/public/assets/ -maxdepth 1 -type f \
-  \( -name "*.js" -o -name "*.css" -o -name "*.map" -o -name "*.json" \) -delete
+# 注意：容器内是 BusyBox，不支持 find 的 \( \) 分组语法，改用 sh -c + shell 通配符
+docker exec bbs-flarum-1 sh -c 'cd /var/www/flarum/public/assets && rm -f *.js *.css *.map *.json'
 
 # 删除可重新发布的子目录
 docker exec bbs-flarum-1 rm -rf /var/www/flarum/public/assets/extensions
@@ -62,6 +62,8 @@ docker exec bbs-flarum-1 php flarum assets:publish
 
 ### 第五步：清除缓存
 ```bash
+# 需要执行两次：第一次清缓存，第二次防止偶发性坏数据写入导致白屏
+docker exec bbs-flarum-1 php flarum cache:clear
 docker exec bbs-flarum-1 php flarum cache:clear
 ```
 
