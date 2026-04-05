@@ -14,6 +14,7 @@ interface HeroButton {
 
 export default class HeroButtonsPage extends ExtensionPage {
   private buttons!: Stream<HeroButton[]>;
+  private saving: boolean = false;
 
   oninit(vnode: Mithril.Vnode) {
     super.oninit(vnode);
@@ -21,10 +22,23 @@ export default class HeroButtonsPage extends ExtensionPage {
     this.buttons = Stream<HeroButton[]>(raw ? JSON.parse(raw) : []);
   }
 
-  data() {
-    return {
-      hero_buttons: JSON.stringify(this.buttons()),
-    };
+  save() {
+    if (this.saving) return;
+    this.saving = true;
+    m.redraw();
+
+    app.request({
+      method: 'POST',
+      url: app.forum.attribute('apiUrl') + '/settings',
+      body: { hero_buttons: JSON.stringify(this.buttons()) },
+    }).then(() => {
+      app.alerts.show({ type: 'success' }, '保存成功');
+    }).catch(() => {
+      app.alerts.show({ type: 'error' }, '保存失败，请重试');
+    }).finally(() => {
+      this.saving = false;
+      m.redraw();
+    });
   }
 
   content() {
@@ -121,8 +135,8 @@ export default class HeroButtonsPage extends ExtensionPage {
             {' '}
             <Button
               className="Button Button--primary"
-              onclick={() => this.saveSettings(new Event('submit'))}
-              loading={this.loading}
+              onclick={() => this.save()}
+              loading={this.saving}
             >
               保存
             </Button>
