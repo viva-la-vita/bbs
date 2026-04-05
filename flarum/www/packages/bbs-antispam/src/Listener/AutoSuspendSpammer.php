@@ -69,7 +69,7 @@ class AutoSuspendSpammer
             ->join('users as flaggers', 'flags.user_id', '=', 'flaggers.id')
             ->where('posts.user_id', $target->id)
             ->where('flags.type', 'user')
-            ->where('flaggers.created_at', '<=', Carbon::now()->subDays(self::FLAGGER_MIN_AGE_DAYS))
+            ->where('flaggers.joined_at', '<=', Carbon::now()->subDays(self::FLAGGER_MIN_AGE_DAYS))
             ->distinct()
             ->count('flags.user_id');
 
