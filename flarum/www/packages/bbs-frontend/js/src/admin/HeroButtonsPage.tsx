@@ -48,7 +48,13 @@ export default class HeroButtonsPage extends ExtensionPage {
       <div className="container">
         <div className="Form">
           <h3>首页 Hero 按钮</h3>
-          <p className="helpText">配置显示在首页横幅上的按钮。内部页面填写路径（如 /p/1-help），外部链接填写完整 URL。</p>
+          <p className="helpText">
+            配置移动端首页横幅上的按钮。所有字段均需手动填写。<br />
+            · 按钮文字示例：<code>使用指南</code><br />
+            · 内部页面（FoF Pages）目标地址示例：<code>/p/1-help</code><br />
+            · 外部链接目标地址示例：<code>https://example.com</code><br />
+            · 统计路径示例：<code>click-help</code>（可不填）
+          </p>
 
           {buttons.map((btn, i) => (
             <div className="Form-group" style="border: 1px solid #e3e3e3; padding: 12px; border-radius: 6px; margin-bottom: 8px;" key={btn.key}>
@@ -58,7 +64,6 @@ export default class HeroButtonsPage extends ExtensionPage {
                   <input
                     className="FormControl"
                     style="width: 140px"
-                    placeholder="使用指南"
                     value={btn.label}
                     oninput={(e: InputEvent) => {
                       buttons[i].label = (e.target as HTMLInputElement).value;
@@ -85,7 +90,6 @@ export default class HeroButtonsPage extends ExtensionPage {
                   <label>目标地址</label>
                   <input
                     className="FormControl"
-                    placeholder={btn.type === 'route' ? '/p/1-help' : 'https://example.com'}
                     value={btn.target}
                     oninput={(e: InputEvent) => {
                       buttons[i].target = (e.target as HTMLInputElement).value;
@@ -98,7 +102,6 @@ export default class HeroButtonsPage extends ExtensionPage {
                   <input
                     className="FormControl"
                     style="width: 160px"
-                    placeholder="click-help"
                     value={btn.gcPath || ''}
                     oninput={(e: InputEvent) => {
                       buttons[i].gcPath = (e.target as HTMLInputElement).value;
