@@ -8,7 +8,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Frontend",
+            "title": "cyh1001-frontend",
             "icon": {
                 "name": "fas fa-smile",
                 "backgroundColor": "#238c59",

@@ -118,6 +118,14 @@ export default class HeroButtonsPage extends ExtensionPage {
             >
               + 添加按钮
             </Button>
+            {' '}
+            <Button
+              className="Button Button--primary"
+              onclick={() => this.saveSettings(new Event('submit'))}
+              loading={this.loading}
+            >
+              保存
+            </Button>
           </div>
         </div>
       </div>
