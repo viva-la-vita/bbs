@@ -1,6 +1,7 @@
 vendor
 .env
 docs/spam-control.md
+docs/worklog*.md
 node_modules
 dist
 flarum/www/public

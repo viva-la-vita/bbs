@@ -38,7 +38,7 @@ class AutoSuspendSpammer
         }
 
         // 举报人自身须注册满 FLAGGER_MIN_AGE_DAYS 天
-        if ($flagger->created_at->diffInDays(Carbon::now()) < self::FLAGGER_MIN_AGE_DAYS) {
+        if (!$flagger->joined_at || $flagger->joined_at->diffInDays(Carbon::now()) < self::FLAGGER_MIN_AGE_DAYS) {
             return;
         }
 
@@ -59,7 +59,7 @@ class AutoSuspendSpammer
         }
 
         // 被举报账号须注册不足 ACCOUNT_AGE_DAYS 天
-        if ($target->created_at->diffInDays(Carbon::now()) >= self::ACCOUNT_AGE_DAYS) {
+        if (!$target->joined_at || $target->joined_at->diffInDays(Carbon::now()) >= self::ACCOUNT_AGE_DAYS) {
             return;
         }
 
@@ -77,7 +77,7 @@ class AutoSuspendSpammer
             return;
         }
 
-        $accountAgeDays = $target->created_at->diffInDays(Carbon::now());
+        $accountAgeDays = $target->joined_at->diffInDays(Carbon::now());
         $alreadySuspended = $target->suspended_until && $target->suspended_until->isFuture();
 
         // 隐藏该用户的所有帖子（无论是否已被暂停，帖子可能仍公开）
