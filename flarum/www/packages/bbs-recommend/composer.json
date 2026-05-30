@@ -1,0 +1,24 @@
+{
+    "name": "viva-la-vita/bbs-recommend",
+    "description": "「推荐」首页：时间序 70% + 推荐内容 30% 双漏斗混合，含管理员推流/限流",
+    "type": "flarum-extension",
+    "version": "0.1.0",
+    "require": {
+        "flarum/core": "^1.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VivalAvita\\BbsRecommend\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "BBS 推荐首页",
+            "icon": {
+                "name": "fas fa-fire",
+                "backgroundColor": "#e67e22",
+                "color": "#fff"
+            }
+        }
+    }
+}

@@ -16,7 +16,9 @@ export default function () {
       return acc;
     }, {});
 
-    const availableSorts = ['latest', 'front', 'top'];
+    // 'recommend' 排序由 viva-la-vita/bbs-recommend 插件提供（后端 + 文案）。
+    // 该插件未启用时此项无对应 sortMap，按钮不会渲染，安全。
+    const availableSorts = ['recommend', 'latest', 'front', 'top'];
 
     availableSorts.forEach((value) => {
       const label = sortOptions[value];
