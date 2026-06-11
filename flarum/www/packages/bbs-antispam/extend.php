@@ -1,9 +1,12 @@
 <?php
 
+use Flarum\Discussion\Discussion;
 use Flarum\Extend;
 use Flarum\Flags\Event\Created;
 use Flarum\Flags\Flag;
+use Flarum\Post\Post;
 use VivalAvita\BbsAntispam\Access\ScopeAutoSuspendFlagVisibility;
+use VivalAvita\BbsAntispam\Access\ScopeViewPrivateDiscussions;
 use VivalAvita\BbsAntispam\Command\UnsuspendCommand;
 use VivalAvita\BbsAntispam\Listener\AutoSuspendSpammer;
 
@@ -17,4 +20,11 @@ return [
     // autoSuspend 通知仅管理员可见，版主不可见
     (new Extend\ModelVisibility(Flag::class))
         ->scope(ScopeAutoSuspendFlagVisibility::class),
+
+    // 「查看他人私信」权限 user.viewPrivateDiscussions：
+    // 有此权限者（管理员自动拥有）可见所有 byobu 私信讨论及其帖子。
+    (new Extend\ModelVisibility(Discussion::class))
+        ->scope(ScopeViewPrivateDiscussions::class, 'viewPrivate'),
+    (new Extend\ModelVisibility(Post::class))
+        ->scope(ScopeViewPrivateDiscussions::class, 'viewPrivate'),
 ];
