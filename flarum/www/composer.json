@@ -84,8 +84,7 @@
         "the-turk/flarum-stickiest": "*",
         "viva-la-vita/bbs-antispam": "*",
         "viva-la-vita/bbs-filter": "*",
-        "viva-la-vita/bbs-frontend": "^0.1.0",
-        "viva-la-vita/bbs-recommend": "*"
+        "viva-la-vita/bbs-frontend": "^0.1.0"
     },
     "config": {
         "preferred-install": "dist",

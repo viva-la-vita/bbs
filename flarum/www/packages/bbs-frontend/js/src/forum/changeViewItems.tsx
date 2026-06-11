@@ -16,13 +16,10 @@ export default function () {
       return acc;
     }, {});
 
-    // 'recommend' 排序由 viva-la-vita/bbs-recommend 插件提供（后端注册 sort + 文案翻译）。
-    const availableSorts = ['recommend', 'latest', 'front', 'top'];
+    const availableSorts = ['latest', 'front', 'top'];
 
     availableSorts.forEach((value) => {
-      // 直接按排序名取翻译，不依赖前端 sortMap 是否登记了该键。
-      // （recommend 排序仅在后端注册，前端 sortMap 没有它，故旧写法 sortOptions[value] 取不到文字。）
-      const label = sortOptions[value] ?? app.translator.trans(`core.forum.index_sort.${value}_button`);
+      const label = sortOptions[value];
       const active = (app.search.params().sort || Object.keys(sortMap)[0]) === value;
 
       items.add(
