@@ -54,7 +54,7 @@ class ApprovalsController implements RequestHandlerInterface
         // 待审核主题
         $discussionTotal = Discussion::where('is_approved', false)->count();
         $discussions = Discussion::where('is_approved', false)
-            ->with('user')
+            ->with(['user', 'firstPost'])
             ->orderByRaw('created_at IS NULL, created_at DESC')
             ->skip($offset)
             ->take(self::PER_PAGE)
@@ -117,6 +117,10 @@ class ApprovalsController implements RequestHandlerInterface
             if ($d->hidden_at) {
                 $hidden .= ' <span style="color:#c00">[已隐藏]</span>';
             }
+            $excerpt = '';
+            if ($d->firstPost && $d->firstPost->content) {
+                $excerpt = htmlspecialchars(mb_substr(strip_tags((string) $d->firstPost->content), 0, 80), ENT_QUOTES);
+            }
             $approveBtn = '<form method="POST" action="/approvals" style="display:inline">'
                 . '<input type="hidden" name="action" value="approve">'
                 . '<input type="hidden" name="type" value="discussion">'
@@ -124,7 +128,7 @@ class ApprovalsController implements RequestHandlerInterface
                 . '<input type="hidden" name="page" value="' . $page . '">'
                 . '<button type="submit" class="btn">审核通过</button></form>';
             $discRows .= "<tr><td>{$i}</td>"
-                . "<td><a href=\"/d/{$d->id}\" target=\"_blank\">{$title}</a>{$hidden}</td>"
+                . "<td><a href=\"/d/{$d->id}\" target=\"_blank\">{$title}</a>{$hidden}<br><span style='color:#888;font-size:12px'>{$excerpt}</span></td>"
                 . "<td>{$author}</td>"
                 . "<td>{$time}</td>"
                 . "<td>{$approveBtn}</td></tr>";
