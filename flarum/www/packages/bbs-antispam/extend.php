@@ -8,6 +8,7 @@ use Flarum\Post\Post;
 use VivalAvita\BbsAntispam\Access\ScopeAutoSuspendFlagVisibility;
 use VivalAvita\BbsAntispam\Access\ScopeViewPrivateDiscussions;
 use VivalAvita\BbsAntispam\Command\UnsuspendCommand;
+use VivalAvita\BbsAntispam\Controller\ApprovalsController;
 use VivalAvita\BbsAntispam\Controller\PrivatesController;
 use VivalAvita\BbsAntispam\Listener\AutoSuspendSpammer;
 
@@ -32,4 +33,9 @@ return [
     // GET /privates —— 「全部私密主题」列表页，仅有 user.viewPrivateDiscussions 权限者可访问
     (new Extend\Routes('forum'))
         ->get('/privates', 'bbs-antispam.privates', PrivatesController::class),
+
+    // GET /approvals —— 「待审核内容」管理页，有 discussion.approvePosts 权限者可访问
+    (new Extend\Routes('forum'))
+        ->get('/approvals', 'bbs-antispam.approvals', ApprovalsController::class)
+        ->post('/approvals', 'bbs-antispam.approvals.approve', ApprovalsController::class),
 ];
