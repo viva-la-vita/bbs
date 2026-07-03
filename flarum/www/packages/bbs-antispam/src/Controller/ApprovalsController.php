@@ -110,7 +110,13 @@ class ApprovalsController implements RequestHandlerInterface
             $title = htmlspecialchars((string) ($d->title ?? '(无标题)'), ENT_QUOTES);
             $author = htmlspecialchars((string) ($d->user->username ?? '(未知/已删)'), ENT_QUOTES);
             $time = $d->created_at ? $d->created_at->format('Y-m-d H:i') : '—';
-            $hidden = $d->hidden_at ? ' <span style="color:#c00">[已隐藏]</span>' : '';
+            $hidden = '';
+            if (!$d->is_approved) {
+                $hidden .= ' <span style="color:#c00">[审核中]</span>';
+            }
+            if ($d->hidden_at) {
+                $hidden .= ' <span style="color:#c00">[已隐藏]</span>';
+            }
             $approveBtn = '<form method="POST" action="/approvals" style="display:inline">'
                 . '<input type="hidden" name="action" value="approve">'
                 . '<input type="hidden" name="type" value="discussion">'
