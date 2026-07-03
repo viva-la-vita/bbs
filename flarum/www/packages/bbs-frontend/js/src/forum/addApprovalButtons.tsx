@@ -27,9 +27,17 @@ export default function () {
         <Button
           icon="fas fa-check"
           onclick={() => {
-            discussion.save({ isApproved: true }).then(() => {
-              app.alerts.show({ type: 'success' }, '主题已审核通过');
-            });
+            // Flarum 核心没有处理 Discussion 的 isApproved 属性，
+            // 必须通过审核首帖来间接审核主题。
+            // 首帖审核通过后，flarum/approval 的 UpdateDiscussionAfterPostApproval
+            // 会自动将 discussion.is_approved 设为 true。
+            const firstPost = discussion.firstPost();
+            if (firstPost) {
+              firstPost.save({ isApproved: true }).then(() => {
+                discussion.pushAttributes({ isApproved: true });
+                app.alerts.show({ type: 'success' }, '主题已审核通过');
+              });
+            }
           }}
         >
           审核通过
