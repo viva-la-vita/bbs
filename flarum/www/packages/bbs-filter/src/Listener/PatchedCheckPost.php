@@ -2,6 +2,7 @@
 
 namespace VivalAvita\BbsFilter\Listener;
 
+use Flarum\Post\Event\Saving;
 use FoF\Filter\Listener\CheckPost;
 
 /**
@@ -12,9 +13,27 @@ use FoF\Filter\Listener\CheckPost;
  *    producing invalid regexes and silently disabling the entire filter.
  * 2. Plain-text words containing '/' (e.g. URLs) were not escaped,
  *    also producing invalid regexes.
+ *
+ * Additionally implements "人审终局"：人工审核通过的保存操作跳过敏感词检查。
  */
 class PatchedCheckPost extends CheckPost
 {
+    /**
+     * 本次保存是「审核通过」操作（data 中带 isApproved: true）时直接放行。
+     *
+     * 否则管理员/版主点击审核通过会触发一次帖子保存，CheckPost 重新匹配到
+     * 敏感词又把帖子打回待审核——机器判断不应推翻人工审核的结论。
+     */
+    public function handle(Saving $event): void
+    {
+        $attributes = $event->data['attributes'] ?? [];
+
+        if (!empty($attributes['isApproved'])) {
+            return;
+        }
+
+        parent::handle($event);
+    }
     private const LEET_REPLACE = [
         'a' => '(a|a\.|a\-|4|@|Á|á|À|Â|à|Â|â|Ä|ä|Ã|ã|Å|å|α|Δ|Λ|λ)',
         'b' => '(b|b\.|b\-|8|\|3|ß|Β|β)',
