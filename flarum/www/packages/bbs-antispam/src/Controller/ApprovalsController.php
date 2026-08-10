@@ -84,15 +84,17 @@ class ApprovalsController implements RequestHandlerInterface
             if ($discussion && $actor->can('approvePosts', $discussion)) {
                 $discussion->is_approved = true;
                 $discussion->save();
-                // 同时将该主题下所有未审核帖子也设为已审核
+                // 同时将该主题下所有未审核帖子也设为已审核；
+                // auto_mod 标记为「人审终局」，今后保存不再被敏感词过滤器打回
                 Post::where('discussion_id', $discussion->id)
                     ->where('is_approved', false)
-                    ->update(['is_approved' => true]);
+                    ->update(['is_approved' => true, 'auto_mod' => true]);
             }
         } elseif ($type === 'post') {
             $post = Post::where('id', $id)->where('is_approved', false)->first();
             if ($post && $actor->can('approvePosts', $post->discussion)) {
                 $post->is_approved = true;
+                $post->auto_mod = true;
                 $post->save();
             }
         }

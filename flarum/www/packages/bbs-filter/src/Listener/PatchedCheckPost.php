@@ -29,6 +29,10 @@ class PatchedCheckPost extends CheckPost
         $attributes = $event->data['attributes'] ?? [];
 
         if (!empty($attributes['isApproved'])) {
+            // 人审终局：人工审核通过的帖子打 auto_mod 标记，
+            // 今后对该帖子的任何保存（如作者编辑）都不再重新过滤，
+            // 避免「审核通过 → 再次保存 → 又被打回待审核」循环。
+            $event->post->auto_mod = true;
             return;
         }
 

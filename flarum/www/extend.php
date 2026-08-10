@@ -8,5 +8,11 @@
  */
 
 use Flarum\Extend;
+use VivalAvita\BbsFilter\Provider\FilterPatchServiceProvider;
 
-return [];
+return [
+    // 无条件加载 fof/filter 补丁（不依赖后台启用 bbs-filter 扩展）：
+    // 修复敏感词正则生成 bug + 人工审核通过后不再被机器打回。
+    (new Extend\ServiceProvider())
+        ->register(FilterPatchServiceProvider::class),
+];
