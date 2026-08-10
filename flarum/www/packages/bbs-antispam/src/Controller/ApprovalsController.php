@@ -51,6 +51,9 @@ class ApprovalsController implements RequestHandlerInterface
         $page = max(1, (int) Arr::get($request->getQueryParams(), 'page', 1));
         $offset = ($page - 1) * self::PER_PAGE;
 
+        // CSRF token：POST 表单需携带，否则被 CheckCsrfToken 中间件拦截
+        $csrfToken = (string) $request->getAttribute('session')->token();
+
         // 待审核主题
         $discussionTotal = Discussion::where('is_approved', false)->count();
         $discussions = Discussion::where('is_approved', false)
@@ -73,7 +76,7 @@ class ApprovalsController implements RequestHandlerInterface
             ->get();
 
         return new HtmlResponse($this->render(
-            $discussions, $posts, $page, $discussionTotal, $postTotal
+            $discussions, $posts, $page, $discussionTotal, $postTotal, $csrfToken
         ));
     }
 
@@ -100,7 +103,7 @@ class ApprovalsController implements RequestHandlerInterface
         }
     }
 
-    private function render($discussions, $posts, int $page, int $discussionTotal, int $postTotal): string
+    private function render($discussions, $posts, int $page, int $discussionTotal, int $postTotal, string $csrfToken): string
     {
         $totalPages = max(1, (int) ceil(max($discussionTotal, $postTotal) / self::PER_PAGE));
 
@@ -124,6 +127,7 @@ class ApprovalsController implements RequestHandlerInterface
                 $excerpt = htmlspecialchars(mb_substr(strip_tags((string) $d->firstPost->content), 0, 80), ENT_QUOTES);
             }
             $approveBtn = '<form method="POST" action="/approvals" style="display:inline">'
+                . '<input type="hidden" name="csrfToken" value="' . $csrfToken . '">'
                 . '<input type="hidden" name="action" value="approve">'
                 . '<input type="hidden" name="type" value="discussion">'
                 . '<input type="hidden" name="id" value="' . $d->id . '">'
@@ -149,6 +153,7 @@ class ApprovalsController implements RequestHandlerInterface
             $time = $p->created_at ? $p->created_at->format('Y-m-d H:i') : '—';
             $content = htmlspecialchars(mb_substr(strip_tags((string) $p->content), 0, 80), ENT_QUOTES);
             $approveBtn = '<form method="POST" action="/approvals" style="display:inline">'
+                . '<input type="hidden" name="csrfToken" value="' . $csrfToken . '">'
                 . '<input type="hidden" name="action" value="approve">'
                 . '<input type="hidden" name="type" value="post">'
                 . '<input type="hidden" name="id" value="' . $p->id . '">'
