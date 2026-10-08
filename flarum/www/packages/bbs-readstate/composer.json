@@ -1,0 +1,24 @@
+{
+    "name": "viva-la-vita/bbs-readstate",
+    "description": "Atomic discussion read-state writes to prevent duplicate-key errors under concurrency",
+    "type": "flarum-extension",
+    "version": "1.0.0",
+    "require": {
+        "flarum/core": "^1.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VivalAvita\\BbsReadstate\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "BBS Read State Fix",
+            "icon": {
+                "name": "fas fa-check-double",
+                "backgroundColor": "#2c3e50",
+                "color": "#fff"
+            }
+        }
+    }
+}
