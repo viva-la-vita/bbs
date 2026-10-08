@@ -92,6 +92,14 @@
         "sort-packages": true,
         "audit": {
             "ignore": ["PKSA-zqkh-gtty-c5yv"]
+        },
+        "policy": {
+            "advisories": {
+                "ignore-id": [
+                    "PKSA-w9tt-7782-78jx",
+                    "PKSA-pwh8-d4fr-nywn"
+                ]
+            }
         }
     },
     "repositories": [
