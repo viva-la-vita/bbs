@@ -1,0 +1,19 @@
+#!/bin/sh
+# 每周归档 1 份 Docker 容器日志（配合 /etc/logrotate.d/docker-containers 的"日归档保留 30 天"）：
+# 每周把 29 天前的那份日归档复制为周归档，清理 52 周（364 天）前的旧周归档。
+#
+# 安装：cp 到宿主机 /etc/cron.weekly/docker-log-weekly && chmod +x
+#       （/etc/cron.weekly 下的文件不能有 .sh 后缀，run-parts 会忽略带后缀的脚本）
+
+WEEKLY_DIR=/var/log/docker-weekly
+mkdir -p "$WEEKLY_DIR"
+
+STAMP=$(date -d '29 days ago' +%Y%m%d)
+
+for f in /var/lib/docker/containers/*/*-json.log-"$STAMP".gz; do
+    [ -e "$f" ] || continue
+    cp -n "$f" "$WEEKLY_DIR/$(basename "$f")"
+done
+
+# 只保留最近 52 周的周归档
+find "$WEEKLY_DIR" -name '*-json.log-*.gz' -mtime +364 -delete

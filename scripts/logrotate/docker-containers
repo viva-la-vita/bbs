@@ -1,0 +1,26 @@
+# Docker 容器 json 日志轮转：全部容器（bbs-flarum / bbs-nginx / bbs-mysql / gateway-nginx ...）
+#
+# 策略：每日轮转，保留最近 30 天（日归档）；
+#       30 天之前的由 scripts/logrotate/docker-log-weekly（cron.weekly）每周归档 1 份，保留 52 周。
+#
+# 安装：cp 到宿主机 /etc/logrotate.d/docker-containers
+#       配置文件内容有变动时重新 cp 一次即可，logrotate 每次运行都会重读。
+#
+# 注意：
+# - copytruncate 模式（docker json-file 句柄不重开，必须用它）。
+#   首次运行时会把现有 ~80G 日志整体复制一次再压缩，IO 较重，请在低峰期手动执行：
+#       sudo logrotate -f /etc/logrotate.d/docker-containers
+#   之后每天只处理当天增量（约 0.5G），开销可忽略。
+# - dateext 让归档文件名带日期（-json.log-20261008.gz），周归档脚本依赖此命名。
+
+/var/lib/docker/containers/*/*-json.log {
+    daily
+    rotate 30
+    dateext
+    dateformat -%Y%m%d
+    compress
+    delaycompress
+    missingok
+    notifempty
+    copytruncate
+}
