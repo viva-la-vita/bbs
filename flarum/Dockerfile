@@ -35,7 +35,7 @@ COPY --from=builder /packages packages
 
 COPY www/composer.json www/composer.lock ./
 
-RUN composer update
+RUN composer update -W
 
 COPY www/config.php www/extend.php www/site.php www/flarum ./
 
