@@ -95,9 +95,11 @@
         },
         "policy": {
             "advisories": {
+                "block": false,
                 "ignore-id": [
                     "PKSA-w9tt-7782-78jx",
-                    "PKSA-pwh8-d4fr-nywn"
+                    "PKSA-pwh8-d4fr-nywn",
+                    "PKSA-zqkh-gtty-c5yv"
                 ]
             }
         }
