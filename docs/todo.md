@@ -1,13 +1,16 @@
-# 待办事项（截至 2026-10-08）
+# 待办事项（截至 2026-10-08 晚：已部署上线）
 
 > 诊断详情见 [diagnosis-2026-10-08.md](./diagnosis-2026-10-08.md)
+> 部署记录：2026-10-08 完成 flarum + nginx 两个镜像的构建与部署，数据库迁移已执行（仅 fof/follow-tags 有两条），网站恢复正常。
 
-## 一、代码改动（已就绪，待用户 commit + push 触发 Actions 构建）
+## 一、代码改动（✅ 已提交、已构建、已部署）
 
-- [ ] `flarum/www/packages/bbs-readstate/` + `composer.json`：修复 `discussion_user` 主键冲突（标记已读 500 / 小黑屋问题）
-- [ ] `nginx/conf.d/flarum.conf`：拦截 ExaSearchBot（UA 403）+ robots.txt 声明
+- [x] `flarum/www/packages/bbs-readstate/` + `composer.json`：修复 `discussion_user` 主键冲突（标记已读 500 / 小黑屋问题）——已在后台启用（BBS Read State Fix）
+- [x] `bbs-frontend` 搜索防抖 250ms → 600ms（随 flarum 镜像部署）
+- [x] `nginx/conf.d/flarum.conf`：拦截 ExaSearchBot（UA 403）+ robots.txt 声明
+- [x] `flarum/Dockerfile`：`composer update -W`；`composer.json` 关闭安全公告拦截（policy.advisories.block=false）——修复 Actions 构建失败
 
-## 二、部署步骤（Actions 构建变绿后，服务器执行）
+## 二、部署步骤（已完成，留存备查）
 
 > **重要：flarum 和 nginx 是两条独立的部署线。**
 > - flarum 镜像 = PHP-FPM 代码；nginx 镜像 = nginx + conf.d/（Dockerfile 里 `COPY . .` 把配置打进镜像）。
@@ -37,17 +40,17 @@ docker compose up -d
 
 ## 三、验证清单
 
-### 3.1 问题一（已读 500 / 小黑屋）— 部署后 24~48 小时
+### 3.1 问题一（已读 500 / 小黑屋）— ⏳ 待验证
 
 - [ ] 管理员账号实测点击"小黑屋"，确认正常加载（不再 500）
-- [ ] 日志无新增主键冲突：
+- [ ] **明天**日志无新增主键冲突：
   ```bash
-  docker exec bbs-flarum-1 grep -c "Duplicate entry" storage/logs/<次日及以后日志>
+  docker exec bbs-flarum-1 grep -c "Duplicate entry" storage/logs/flarum-2026-10-09.log
   ```
   预期：0 或接近 0（对照：修复前每天 100~200 条）
-- [ ] 如有 `flarum migrate` 提示则执行（DEPLOY.md 步骤 4，本次应不需要）
+- [x] `flarum migrate` 已执行（2026-10-08，仅 fof/follow-tags 两条迁移）
 
-### 3.2 ExaSearchBot 拦截 — 部署后立即
+### 3.2 ExaSearchBot 拦截 — ⏳ 待 curl 验证
 
 - [ ] 模拟爬虫应返回 403：
   ```bash
@@ -62,6 +65,11 @@ docker compose up -d
   curl -s https://bbs.viva-la-vita.org/robots.txt
   ```
 - [ ] 观察 30 分钟：日志中 ExaSearchBot 请求全部变为 403，总请求量下降（修复前约占 10%）
+
+### 3.3 搜索防抖 — ⏳ 待浏览器验证
+
+- [ ] F12 Network：搜索框慢慢打字，请求防抖约 600ms（原 250ms）
+- [ ] 快速回归：投票帖、附件帖、第三方登录（本次批量升级了 fof/polls、fof/upload、fof/oauth）
 
 ## 四、P0 剩余项（服务器操作，未做）
 
